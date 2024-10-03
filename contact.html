@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-bar">
+            <a href="index.html" class="nav-link" id="home-link" data-en="Home" data-de="Home">Home</a>
+            <a href="about.html" class="nav-link" id="about-link" data-en="About Me" data-de="Über mich">Über mich</a>
+            <a href="career.html" class="nav-link" id="career-link" data-en="Career" data-de="Beruflicher Werdegang">Beruflicher Werdegang</a>
+            <a href="education.html" class="nav-link" id="education-link" data-en="Education" data-de="Schulischer Werdegang">Schulischer Werdegang</a>
+            <a href="skills.html" class="nav-link" id="skills-link" data-en="Skills" data-de="Fähigkeiten">Fähigkeiten</a>
+            <a href="contact.html" class="nav-link active" id="contact-link" data-en="Contact" data-de="Kontakt">Kontakt</a>
+            <a href="impressum.html" class="nav-link" id="impressum-link" data-en="Imprint" data-de="Impressum">Impressum</a>
+
+            <!-- Sprachumschalter-Buttons -->
+            <div class="language-switcher">
+                <img src="flag-de.png" alt="Deutsch" id="de-flag" class="language-flag">
+                <img src="flag-en.png" alt="English" id="en-flag" class="language-flag">
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <h2 data-en="Want to know more? Contact me!" data-de="Möchten Sie mehr wissen? Kontaktieren Sie mich!">Möchten Sie mehr wissen? Kontaktieren Sie mich!</h2>
+        <div class="contact-form">
+            <form action="https://formspree.io/f/mqazrkao" method="post">
+                <label for="name" data-en="Name" data-de="Name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" data-en="Name" data-de="Name">
+
+                <label for="surname" data-en="Surname" data-de="Nachname">Nachname</label>
+                <input type="text" id="surname" name="surname" placeholder="Nachname" data-en="Surname" data-de="Nachname">
+
+                <label for="email" data-en="Email" data-de="E-Mail">E-Mail</label>
+                <input type="email" id="email" name="email" placeholder="E-Mail" data-en="Email" data-de="E-Mail">
+
+                <label for="message" data-en="Message" data-de="Nachricht">Nachricht</label>
+                <textarea id="message" name="message" placeholder="Nachricht" data-en="Message" data-de="Nachricht"></textarea>
+
+                <input type="submit" value="submit" data-en="Submit" data-de="Senden">
+            </form>
+        </div>
+    </main>
+
+    <div id="backToTop">
+        <div class="arrow-up"></div>
+        <span class="back-to-top-text" data-en="Back to Top" data-de="Back to Top">Back to Top</span>
+    </div>
+
+    <script>
+        // Setze die Sprache beim Laden der Seite
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang') || localStorage.getItem('language') || 'de';
+            changeLanguage(lang);
+        });
+    </script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

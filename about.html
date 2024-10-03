@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über mich</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-bar">
+            <a href="index.html" class="nav-link" id="home-link" data-en="Home" data-de="Home">Home</a>
+            <a href="about.html" class="nav-link active" id="about-link" data-en="About Me" data-de="Über mich">Über mich</a>
+            <a href="career.html" class="nav-link" id="career-link" data-en="Career" data-de="Beruflicher Werdegang">Beruflicher Werdegang</a>
+            <a href="education.html" class="nav-link" id="education-link" data-en="Education" data-de="Schulischer Werdegang">Schulischer Werdegang</a>
+            <a href="skills.html" class="nav-link" id="skills-link" data-en="Skills" data-de="Fähigkeiten">Fähigkeiten</a>
+            <a href="contact.html" class="nav-link" id="contact-link" data-en="Contact" data-de="Kontakt">Kontakt</a>
+            <a href="impressum.html" class="nav-link" id="impressum-link" data-en="Imprint" data-de="Impressum">Impressum</a>
+
+            <!-- Sprachumschalter-Buttons -->
+            <div class="language-switcher">
+                <img src="flag-de.png" alt="Deutsch" id="de-flag" class="language-flag">
+                <img src="flag-en.png" alt="English" id="en-flag" class="language-flag">
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <h2 data-en="Who am I?" data-de="Wer bin ich?">Wer bin ich?</h2>
+                    <!-- Bild von dir unterhalb des Textes -->
+                    <div class="about-image">
+                        <img src="me.png" alt="Bild von Loris" width="500px"/>
+                    </div>
+        <p data-en="Hi, I’m Loris, a passionate platform developer from Switzerland with a strong focus on building scalable, efficient systems. " data-de="Hi, ich bin Loris, ein leidenschaftlicher angehender Plattformentwickler aus der Schweiz mit einem starken Fokus auf den Aufbau skalierbarer und effizienter Systeme.">
+            Hi, ich bin Loris, ein leidenschaftlicher angehender Plattformentwickler aus der Schweiz...
+        </p>
+        <p data-en="Currently pursuing my career in IT platform development, I enjoy solving complex technical challenges and continuously expanding my skill set. " data-de="Derzeit verfolge ich meine Karriere in der IT-Plattformentwicklung und geniesse es, komplexe technische Herausforderungen zu lösen und kontinuierlich meine Fähigkeiten zu erweitern.">
+            Derzeit verfolge ich meine Karriere in der IT-Plattformentwicklung...
+        </p>
+        <p data-en="With a keen interest in 3D printing, video games, and science, I’m always exploring new technologies and pushing the boundaries of what’s possible." data-de="Mit grossem Interesse an 3D-Druck, Videospielen und Wissenschaft erkunde ich ständig neue Technologien und stosse an die Grenzen des Möglichen.
+        Egal ob durch meine Arbeit oder meine Hobbys, ich liebe es, tief in die Technik einzutauchen und sie für Menschen nutzbar zu machen. Mein Ziel ist es, innovative Lösungen zu entwickeln, die reale Auswirkungen haben, und ich bin stets angetrieben von der Idee, effiziente und zuverlässige Plattformen zu schaffen.">
+            Mit grossem Interesse an 3D-Druck, Videospielen und Wissenschaft...
+        </p>
+
+
+    </main>
+
+    <div id="backToTop">
+        <div class="arrow-up"></div>
+        <span class="back-to-top-text" data-en="Back to Top" data-de="Back to Top">Back to Top</span>
+    </div>
+
+    <script>
+        // Setze die Sprache beim Laden der Seite
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang') || localStorage.getItem('language') || 'de';
+            changeLanguage(lang);
+        });
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>

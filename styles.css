@@ -1,0 +1,459 @@
+/* Body Reset */
+body {
+    background: linear-gradient(135deg, #1C1C1C, #333333);
+    background-attachment: fixed; /* Fixiere den Hintergrund, um Brüche zu vermeiden */
+    background-size: cover; /* Stellt sicher, dass der Verlauf die gesamte Seite abdeckt */
+    color: #FFFFFF;
+}
+
+/* Entferne jegliche Hintergrundfarbe von main */
+main {
+    background: none; /* Kein eigener Hintergrund für das main-Element */
+    margin-top: 60px; /* Platz für den festen Header */
+    margin-left: 25%;  /* 25% der Seite links freihalten */
+    margin-right: 25%; /* 25% der Seite rechts freihalten */
+    text-align: center; /* Zentriert den Text horizontal */
+    font-size: x-large;
+}
+
+/* Titel im Kontaktbereich weiter nach unten setzen */
+.page h2 {
+    margin-top: 100px; /* Schiebt den Titel um 50px nach unten */
+}
+
+/* Header Navigation Styling */
+.header-bar {
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+    overflow-x: auto; /* Ermöglicht horizontales Scrollen */
+    white-space: nowrap; /* Verhindert den Zeilenumbruch der Links */
+}
+
+/* Anpassung nur für den englischen Header */
+.english-header {
+    justify-content: center; /* Zentriere die Links im Header */
+    gap: 30px; /* Abstand zwischen den Links */
+}
+
+.english-header .nav-link {
+    flex: 1; /* Links nehmen gleichmäßig Platz ein */
+    text-align: center; /* Text innerhalb der Links zentrieren */
+}
+
+.nav-link {
+    margin: 0 50px; /* Abstände zwischen den Links */
+    color: white; /* Standardfarbe */
+    text-decoration: none; /* Kein Unterstrich */
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-link.active {
+    color: #FFCC00 !important; /* Gelbe Farbe für die aktive Seite */
+}
+
+/* Language switcher styling */
+.language-switcher {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Abstand zwischen den Flaggen */
+}
+
+.language-flag {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Reduziere die Opazität für die nicht aktive Flagge */
+.inactive-flag {
+    opacity: 0.5;
+}
+
+/* Platz für den Header schaffen */
+main {
+    margin-top: 60px; /* Platz für den festen Header */
+    text-align: center; /* Zentriert den Text horizontal */
+}
+
+/* Willkommenstext und Icon Styling */
+main h2 {
+    font-size: 24px;
+    color: white;
+}
+
+main {
+    margin-top: 60px; /* Platz für den Header, damit der Text nicht dahinter verschwindet */
+    margin-left: 25%;  /* 25% der Seite links freihalten */
+    margin-right: 25%; /* 25% der Seite rechts freihalten */
+    text-align: center; /* Zentriert den Text horizontal */
+    font-size: x-large;
+}
+
+.icon-left, .icon-right {
+    margin: 0 30px;
+}
+
+.person-icon,
+.career-icon,
+.education-icon,
+.skills-icon,
+.contact-icon {
+    margin-top: 20px;
+    transition: transform 0.3s;
+}
+
+.person-icon:hover,
+.career-icon:hover,
+.education-icon:hover,
+.skills-icon:hover,
+.contact-icon:hover {
+    transform: scale(1.1); /* Icons werden beim Hover etwas vergrößert */
+}
+
+/* Animationen */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Füge die Animation zur Seite hinzu */
+.page {
+    animation: slideIn 0.5s forwards;
+}
+
+/* Klasse für das Herausgleiten, die wir per JavaScript hinzufügen */
+.page.out {
+    animation: slideOut 0.5s forwards;
+}
+
+/* Header Text Styling für Home und andere Seiten */
+.header-bar h1 {
+    font-size: 24px;
+    margin: 0;
+    color: black;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Button Styling für Beruflicher und Schulischer Werdegang */
+.career-timeline,
+.education-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.career-button,
+.education-button {
+    background-color: #FFCC00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 60px 0;
+    font-size: 28px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.career-button:hover,
+.education-button:hover {
+    background-color: #002D99;
+}
+
+/* Skills Styling */
+.skills-container {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 20px 0;
+}
+
+.skill-rating {
+    display: flex;
+    gap: 10px;
+}
+
+.skill-rating span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #0047FF;
+}
+
+.filled {
+    background-color: #0047FF;
+}
+
+/* Kontaktformular Styling */
+.contact-form {
+    background-color: rgba(0, 0, 0, 0.9); /* Dunkler, halbtransparenter Hintergrund */
+    padding: 20px 40px; /* Mehr horizontales Padding für gleichmäßigen Abstand */
+    border-radius: 10px;
+    width: 80%; /* Breite des Formulars anpassen */
+    max-width: 600px; /* Maximale Breite für größere Bildschirme */
+    margin: 0 auto; /* Zentriert das Formular auf der Seite */
+    margin-top: 50px; /* Verschiebe das Kontaktformular um 50px nach unten */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: white;
+    text-align: center; /* Zentrieren für ein ordentliches Aussehen */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%; /* Nutzt die gesamte Breite des Elterncontainers */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+    box-sizing: border-box; /* Padding in der Breitenberechnung einschließen */
+}
+
+.contact-form input[type="submit"] {
+    background-color: #FFCC00;
+    color: #1C1C1C;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 100%; /* Knopf über die gesamte Breite des Formulars */
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #FFD700;
+}
+
+/* Back-to-Top Button Styling */
+#backToTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 75px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+#backToTop:hover {
+    transform: scale(1.2); /* Vergrößert den gesamten Button */
+}
+
+#backToTop:hover .arrow-up {
+    border-bottom-width: 36px; /* Vergrößert den Pfeil */
+}
+
+#backToTop:hover .back-to-top-text {
+    font-size: 18px; /* Vergrößert den Text */
+}
+
+/* Pfeil nach oben (CSS-gestaltet) */
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid #FFD700; /* Farbe des Pfeils */
+    margin-bottom: 10px; /* Abstand zwischen dem Pfeil und dem Text */
+}
+
+/* Pfeil-Farbe bei Hover */
+#backToTop:hover .arrow-up {
+    border-bottom-color: #0047FF; /* Farbe bei Hover: Blau */
+}
+
+.back-to-top-text {
+    font-size: 16px;
+    color: white;
+    margin-top: 2px;
+    text-align: center;
+    opacity: 0.8;
+}
+
+/* Gesamtstil der Timeline */
+.timeline-section {
+    margin: 40px 0;
+    padding: 0;
+    border-left: none;
+    background-color: transparent;
+}
+
+/* Header-Stil (Datum) */
+.timeline-header {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.timeline-header h3 {
+    background-color: #FFCC00;
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+/* Inhalt-Stil */
+.timeline-content {
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 8px;
+    color: #FFFFFF;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #00AAFF;
+}
+
+.timeline-content h2 {
+    margin-top: auto;
+    color: #00AAFF;
+}
+
+.timeline-content p {
+    margin: 5px 0;
+}
+
+.timeline-content ul {
+    padding-left: 20px;
+}
+
+.timeline-content ul li {
+    list-style-type: disc;
+    margin-bottom: 15px;
+}
+
+/* Nur die Punkte (discs) blau machen */
+.timeline-content ul li::marker {
+    color: #FFCC00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Header-Titel und Links verkleinern */
+    .nav-link {
+        font-size: 16px;
+        flex-shrink: 0; /* Verhindert, dass die Links zusammengeschoben werden */
+    }
+
+    /* Stelle sicher, dass die Links nicht umbrechen */
+    .header-bar {
+        overflow-x: auto; /* Ermöglicht horizontales Scrollen auf mobilen Geräten */
+        white-space: nowrap; /* Verhindert Umbruch der Links */
+    }
+
+
+    /* Main-Titel anpassen */
+    main h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    /* Allgemeine Textausrichtung */
+    main p, main ul, main li {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    /* Verschiebe das `main`-Element weiter nach unten */
+    main {
+        margin-top: 120px;
+    }
+
+    /* Icons im Home vergrößern */
+    .person-icon,
+    .career-icon,
+    .education-icon,
+    .skills-icon,
+    .contact-icon {
+        width: 20%; /* Vergrößert die Icons auf 20% der Breite */
+        height: auto; /* Erhält das Seitenverhältnis */
+        margin-top: 30px; /* Fügt mehr Abstand nach oben hinzu */
+    }
+
+    /* Skills-Anpassungen */
+    .skills-container {
+        width: 100%;
+    }
+
+    .skill {
+        flex-direction: column;
+    }
+
+    /* Kontaktformular Anpassung */
+    .contact-form {
+        padding: 10px;
+    }
+
+    /* Timeline Button Anpassung */
+    .career-button,
+    .education-button {
+        font-size: 20px;
+        padding: 8px 16px;
+    }
+}
+
+.language-switcher {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.language-flag {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
