@@ -1,11 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meine Webseite</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>My page you dumbass!</h1>
+
+    <header>
+        <div class="header-bar">
+            <a href="index.html" class="nav-link active" id="home-link" data-en="Home" data-de="Home">Home</a>
+            <a href="about.html" class="nav-link" id="about-link" data-en="About Me" data-de="Über mich">Über mich</a>
+            <a href="career.html" class="nav-link" id="career-link" data-en="Career" data-de="Beruflicher Werdegang">Beruflicher Werdegang</a>
+            <a href="education.html" class="nav-link" id="education-link" data-en="Education" data-de="Schulischer Werdegang">Schulischer Werdegang</a>
+            <a href="skills.html" class="nav-link" id="skills-link" data-en="Skills" data-de="Fähigkeiten">Fähigkeiten</a>
+            <a href="contact.html" class="nav-link" id="contact-link" data-en="Contact" data-de="Kontakt">Kontakt</a>
+            <a href="impressum.html" class="nav-link" id="impressum-link" data-en="Imprint" data-de="Impressum">Impressum</a>
+
+            <!-- Sprachumschalter-Buttons -->
+            <div class="language-switcher">
+                <img src="flag-de.png" alt="Deutsch" id="de-flag" class="language-flag">
+                <img src="flag-en.png" alt="English" id="en-flag" class="language-flag">
+            </div>
+        </div>
+    </header>
+
+    <main class="page">
+        <h2 data-en="Welcome to my website!" data-de="Willkommen auf meiner Webseite!">Willkommen auf meiner Webseite!</h2>
+        <h2 data-en="Who am I?" data-de="Wer bin ich?">Wer bin ich?</h2>
+        <a href="about.html">
+            <img src="icon-person.png" height="10%" width="10%" alt="Person Icon" class="person-icon">
+        </a>
+        <h2 data-en="Career" data-de="Beruflicher Werdegang">Beruflicher Werdegang</h2>
+        <a href="career.html">
+            <img src="icon-career.png" height="10%" width="10%" alt="Career Icon" class="career-icon">
+        </a>
+        <h2 data-en="Education" data-de="Schulischer Werdegang">Schulischer Werdegang</h2>
+        <a href="education.html">
+            <img src="icon-education.png" height="10%" width="10%" alt="Education Icon" class="education-icon">
+        </a>
+        <h2 data-en="My Professional Skills" data-de="Meine berufsspezifischen Fähigkeiten">Meine berufsspezifischen Fähigkeiten</h2>
+        <a href="skills.html">
+            <img src="icon-skills.png" height="10%" width="10%" alt="Skills Icon" class="skills-icon">
+        </a>
+        <h2 data-en="How to Contact Me?" data-de="Wie können Sie mich kontaktieren?">Wie können Sie mich kontaktieren?</h2>
+        <a href="contact.html">
+            <img src="icon-contact.png" height="10%" width="10%" alt="Contact Icon" class="contact-icon">
+        </a>
+    </main>
+
+    <div id="backToTop">
+        <div class="arrow-up"></div>
+        <span class="back-to-top-text" data-en="Back to Top" data-de="Back to Top">Back to Top</span>
+    </div>
+    
+    <script>
+        // Setze die Sprache beim Laden der Seite
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang') || localStorage.getItem('language') || 'de';
+            changeLanguage(lang);
+        });
+    </script>
+    <script src="script.js"></script>
+
 </body>
 </html>
