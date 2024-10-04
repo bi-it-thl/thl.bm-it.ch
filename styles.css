@@ -5,7 +5,7 @@ body {
     /* Fixiere den Hintergrund, um Brüche zu vermeiden */
     background-size: cover;
     /* Stellt sicher, dass der Verlauf die gesamte Seite abdeckt */
-    color: #FFFFFF;
+    background-color: #1C1C1C;
 }
 
 /* Entferne jegliche Hintergrundfarbe von main */
