@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log('Formular-Submit abgefangen');
 
             const formData = new FormData(contactForm);
-            const submitButton = contactForm.querySelector('input[type="submit"]');
+            const feedbackBox = document.getElementById('feedbackBox'); // Rückmeldungsbox
 
-            // Setze den Button-Text auf "Wird gesendet..."
-            submitButton.value = localStorage.getItem('language') === 'en' ? 'Sending...' : 'Wird gesendet...';
+            // Setze die Rückmeldung auf "Wird gesendet..."
+            feedbackBox.textContent = localStorage.getItem('language') === 'en' ? 'Sending...' : 'Wird gesendet...';
 
             // Sende die Daten asynchron mit fetch
             fetch('send_mail.php', {
@@ -46,18 +46,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 .then(data => {
                     console.log('Serverantwort:', data);
 
-                    // Setze den Button-Text basierend auf der Antwort des PHP-Skripts
+                    // Setze den Text in der Rückmeldungsbox basierend auf der Antwort des PHP-Skripts
                     if (data.trim() === 'success') {
-                        submitButton.value = localStorage.getItem('language') === 'en' ? 'Email sent!' : 'E-Mail gesendet!';
+                        feedbackBox.textContent = localStorage.getItem('language') === 'en' ? 'Email sent!' : 'E-Mail gesendet!';
                     } else if (data.trim() === 'empty_fields') {
-                        submitButton.value = localStorage.getItem('language') === 'en' ? 'Please fill out all fields.' : 'Bitte alle Felder ausfüllen.';
+                        feedbackBox.textContent = localStorage.getItem('language') === 'en' ? 'Please fill out all fields.' : 'Bitte alle Felder ausfüllen.';
                     } else {
-                        submitButton.value = localStorage.getItem('language') === 'en' ? 'Error: Email not sent.' : 'Fehler: E-Mail konnte nicht gesendet werden.';
+                        feedbackBox.textContent = localStorage.getItem('language') === 'en' ? 'Error: Email not sent.' : 'Fehler: E-Mail konnte nicht gesendet werden.';
                     }
                 })
                 .catch(error => {
                     console.error('Fehler beim Senden der Anfrage:', error);
-                    submitButton.value = localStorage.getItem('language') === 'en' ? 'Error: Email not sent.' : 'Fehler: E-Mail konnte nicht gesendet werden.';
+                    feedbackBox.textContent = localStorage.getItem('language') === 'en' ? 'Error: Email not sent.' : 'Fehler: E-Mail konnte nicht gesendet werden.';
                 });
         });
     }
