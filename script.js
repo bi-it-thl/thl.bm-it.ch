@@ -1,132 +1,121 @@
-// Funktion für sanftes Scrollen nach oben
-document.getElementById("backToTop").addEventListener("click", function() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth" // Sanftes Scrollen nach oben
+document.addEventListener('DOMContentLoaded', function () {
+    // Funktion für sanftes Scrollen nach oben
+    document.getElementById("backToTop")?.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     });
-});
 
-// Funktion zur Aktivierung des aktuellen Links im Header
-document.addEventListener("DOMContentLoaded", function() {
-    const currentPage = window.location.pathname.split("/").pop(); // Holt die aktuelle Datei (z.B. index.html)
-
+    // Funktion zur Aktivierung des aktuellen Links im Header
+    const currentPage = window.location.pathname.split("/").pop();
     document.querySelectorAll('.nav-link').forEach(link => {
-        const linkPage = link.getAttribute('href').split('?')[0]; // Entferne vorhandene Query-Parameter
-
+        const linkPage = link.getAttribute('href').split('?')[0];
         if (currentPage === linkPage) {
-            link.classList.add('active'); // Färbt den aktuellen Link schwarz
+            link.classList.add('active');
         } else {
-            link.classList.remove('active'); // Entfernt die aktive Klasse von den anderen
+            link.classList.remove('active');
         }
     });
+
+    restoreHeaderScrollPosition();
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const lang = urlParams.get('lang') || localStorage.getItem('language') || 'de';
+    changeLanguage(lang);
+
+    // Asynchrones Absenden des Kontaktformulars
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Verhindert das Standardformular-Verhalten (Seitenneuladen)
+            console.log('Formular-Submit abgefangen');
+
+            const formData = new FormData(contactForm);
+            const submitButton = contactForm.querySelector('input[type="submit"]');
+
+            // Setze den Button-Text auf "Wird gesendet..."
+            submitButton.value = localStorage.getItem('language') === 'en' ? 'Sending...' : 'Wird gesendet...';
+
+            // Sende die Daten asynchron mit fetch
+            fetch('send_mail.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.text())
+                .then(data => {
+                    console.log('Serverantwort:', data);
+
+                    // Setze den Button-Text basierend auf der Antwort des PHP-Skripts
+                    if (data.trim() === 'success') {
+                        submitButton.value = localStorage.getItem('language') === 'en' ? 'Email sent!' : 'E-Mail gesendet!';
+                    } else if (data.trim() === 'empty_fields') {
+                        submitButton.value = localStorage.getItem('language') === 'en' ? 'Please fill out all fields.' : 'Bitte alle Felder ausfüllen.';
+                    } else {
+                        submitButton.value = localStorage.getItem('language') === 'en' ? 'Error: Email not sent.' : 'Fehler: E-Mail konnte nicht gesendet werden.';
+                    }
+                })
+                .catch(error => {
+                    console.error('Fehler beim Senden der Anfrage:', error);
+                    submitButton.value = localStorage.getItem('language') === 'en' ? 'Error: Email not sent.' : 'Fehler: E-Mail konnte nicht gesendet werden.';
+                });
+        });
+    }
 });
 
-// Funktion, um die "out"-Klasse hinzuzufügen und Seite zu wechseln
-document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', function (e) {
-        const targetUrl = this.getAttribute('href').split('?')[0]; // Ziel-URL holen (ohne Query-Parameter)
-        const currentPage = window.location.pathname.split("/").pop(); // Aktuelle Seite ermitteln
+// Funktion, um die Header-Scrollposition zu speichern
+function saveHeaderScrollPosition() {
+    const headerBar = document.querySelector('.header-bar');
+    if (headerBar) {
+        localStorage.setItem('headerScrollPosition', headerBar.scrollLeft.toString());
+    }
+}
 
-        // Überprüfen, ob der geklickte Link zur aktuellen Seite führt
-        if (currentPage === targetUrl) {
-            // Überprüfen, ob es sich um einen Sprachwechsel handelt
-            const urlParams = new URLSearchParams(window.location.search);
-            const langParam = urlParams.get('lang');
-            const targetLang = this.getAttribute('href').includes('lang=en') ? 'en' : 'de';
-
-            // Wenn der Sprachwechsel durchgeführt wird, keine Animation
-            if (langParam !== targetLang) {
-                e.preventDefault();
-                changeLanguage(targetLang);
-                return;
-            }
-
-            // Wenn es kein Sprachwechsel ist, nichts tun
-            e.preventDefault();
-            return;
+// Funktion, um die Header-Scrollposition wiederherzustellen
+function restoreHeaderScrollPosition() {
+    const headerBar = document.querySelector('.header-bar');
+    if (headerBar) {
+        const scrollPosition = localStorage.getItem('headerScrollPosition');
+        if (scrollPosition) {
+            headerBar.scrollLeft = parseInt(scrollPosition, 10);
         }
-
-        // Andernfalls Animation abspielen und Seite wechseln
-        e.preventDefault();
-        document.querySelector('.page').classList.add('out'); // Füge die "out"-Klasse hinzu
-
-        // Wechsel nach der Animation
-        setTimeout(() => {
-            window.location.href = this.getAttribute('href');
-        }, 500); // Die Zeit sollte zur Animationsdauer passen
-    });
-});
-
-
-document.querySelectorAll('.career-button').forEach(button => {
-    button.addEventListener('click', () => {
-        const targetId = button.getAttribute('data-target');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            const headerOffset = 100; // Die Höhe des Abstands in Pixeln
-            const elementPosition = targetElement.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.scrollY - headerOffset;
-
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
+    }
+}
 
 // Funktion, um die Sprache zu wechseln
 function changeLanguage(language) {
     document.querySelectorAll('[data-en]').forEach(element => {
         if (element.tagName === 'INPUT' && element.type === 'submit') {
-            // Für das Submit-Button-Value-Attribut
             element.value = element.getAttribute(`data-${language}`);
         } else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-            // Für die Placeholder-Attribute der Eingabefelder
             element.placeholder = element.getAttribute(`data-${language}`);
         } else {
-            // Für andere Elemente
             element.textContent = element.getAttribute(`data-${language}`);
         }
     });
 
-    // Fügt die englische Header-Klasse hinzu oder entfernt sie
-    if (language === 'en') {
-        document.querySelector('.header-bar').classList.add('english-header'); // Klasse für Englisch hinzufügen
-    } else {
-        document.querySelector('.header-bar').classList.remove('english-header'); // Klasse für Deutsch entfernen
-    }
-
-    // Speichere die Sprache in localStorage
     localStorage.setItem('language', language);
-
-    // Aktualisiere alle Links auf der Seite
     updateLinks(language);
-}
 
-// Funktion, um die Links im Header und die Icons basierend auf der Sprache zu aktualisieren
-function updateLinks(language) {
-    // Aktualisiere Links im Header
-    document.querySelectorAll('.nav-link').forEach(link => {
-        let href = link.getAttribute('href').split('?')[0]; // Entferne vorhandene Query-Parameter
-        link.setAttribute('href', `${href}?lang=${language}`);
-    });
-
-    // Aktualisiere die Icons im Hauptbereich
-    document.querySelectorAll('a').forEach(link => {
-        let href = link.getAttribute('href').split('?')[0]; // Entferne vorhandene Query-Parameter
-        link.setAttribute('href', `${href}?lang=${language}`);
-    });
+    if (language === 'en') {
+        document.querySelector('.header-bar').classList.add('english-header');
+    } else {
+        document.querySelector('.header-bar').classList.remove('english-header');
+    }
 }
 
 // Sprachumschalter-Event-Listener
-document.getElementById('de-flag').addEventListener('click', () => changeLanguage('de'));
-document.getElementById('en-flag').addEventListener('click', () => changeLanguage('en'));
+document.getElementById('de-flag')?.addEventListener('click', () => changeLanguage('de'));
+document.getElementById('en-flag')?.addEventListener('click', () => changeLanguage('en'));
 
-// Setze die Sprache beim Laden der Seite
-document.addEventListener('DOMContentLoaded', () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const lang = urlParams.get('lang') || localStorage.getItem('language') || 'de'; // Standard auf Deutsch setzen
-    changeLanguage(lang);
-});
+// Funktion, um die Links im Header zu aktualisieren
+function updateLinks(language) {
+    document.querySelectorAll('.nav-link').forEach(link => {
+        let href = link.getAttribute('href').split('?')[0];
+        link.setAttribute('href', `${href}?lang=${language}`);
+    });
+    document.querySelectorAll('a').forEach(link => {
+        let href = link.getAttribute('href').split('?')[0];
+        link.setAttribute('href', `${href}?lang=${language}`);
+    });
+}

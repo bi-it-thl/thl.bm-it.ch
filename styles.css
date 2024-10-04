@@ -1,88 +1,121 @@
 /* Body Reset */
 body {
     background: linear-gradient(135deg, #1C1C1C, #333333);
-    background-attachment: fixed; /* Fixiere den Hintergrund, um Brüche zu vermeiden */
-    background-size: cover; /* Stellt sicher, dass der Verlauf die gesamte Seite abdeckt */
+    background-attachment: fixed;
+    /* Fixiere den Hintergrund, um Brüche zu vermeiden */
+    background-size: cover;
+    /* Stellt sicher, dass der Verlauf die gesamte Seite abdeckt */
     color: #FFFFFF;
 }
 
 /* Entferne jegliche Hintergrundfarbe von main */
 main {
-    background: none; /* Kein eigener Hintergrund für das main-Element */
-    margin-top: 60px; /* Platz für den festen Header */
-    margin-left: 25%;  /* 25% der Seite links freihalten */
-    margin-right: 25%; /* 25% der Seite rechts freihalten */
-    text-align: center; /* Zentriert den Text horizontal */
+    background: none;
+    /* Kein eigener Hintergrund für das main-Element */
+    margin-top: 60px;
+    /* Platz für den festen Header */
+    margin-left: 25%;
+    /* 25% der Seite links freihalten */
+    margin-right: 25%;
+    /* 25% der Seite rechts freihalten */
+    text-align: center;
+    /* Zentriert den Text horizontal */
     font-size: x-large;
 }
 
 /* Titel im Kontaktbereich weiter nach unten setzen */
 .page h2 {
-    margin-top: 100px; /* Schiebt den Titel um 50px nach unten */
+    margin-top: 100px;
+    /* Schiebt den Titel um 50px nach unten */
 }
 
 /* Header Navigation Styling */
 .header-bar {
     background-color: rgba(0, 0, 0, 0.9);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    /* Startet die Links von links aus */
     align-items: center;
     padding: 10px 20px;
+    /* Leichtes Padding für den Header */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
     box-sizing: border-box;
-    overflow-x: auto; /* Ermöglicht horizontales Scrollen */
-    white-space: nowrap; /* Verhindert den Zeilenumbruch der Links */
+    overflow-x: auto;
+    /* Ermöglicht horizontales Scrollen */
+    white-space: nowrap;
+    /* Verhindert Zeilenumbruch der Links */
 }
 
 /* Anpassung nur für den englischen Header */
 .english-header {
-    justify-content: center; /* Zentriere die Links im Header */
-    gap: 30px; /* Abstand zwischen den Links */
+    justify-content: center;
+    /* Zentriere die Links im Header */
+    gap: 30px;
+    /* Abstand zwischen den Links */
 }
 
 .english-header .nav-link {
-    flex: 1; /* Links nehmen gleichmäßig Platz ein */
-    text-align: center; /* Text innerhalb der Links zentrieren */
+    flex: 1;
+    /* Links nehmen gleichmäßig Platz ein */
+    text-align: center;
+    /* Text innerhalb der Links zentrieren */
 }
 
 .nav-link {
-    margin: 0 50px; /* Abstände zwischen den Links */
-    color: white; /* Standardfarbe */
-    text-decoration: none; /* Kein Unterstrich */
+    margin: 0 50px;
+    /* Abstände zwischen den Links */
+    color: white;
+    /* Standardfarbe */
+    text-decoration: none;
+    /* Kein Unterstrich */
     font-size: 24px;
     font-weight: bold;
 }
 
 .nav-link.active {
-    color: #FFCC00 !important; /* Gelbe Farbe für die aktive Seite */
+    color: #FFCC00 !important;
+    /* Gelbe Farbe für die aktive Seite */
 }
 
 /* Language switcher styling */
 .language-switcher {
     display: flex;
     align-items: center;
-    gap: 10px; /* Abstand zwischen den Flaggen */
+    gap: 10px;
+    /* Abstand zwischen den Flaggen */
 }
 
 .language-flag {
     width: 30px;
     height: 20px;
     cursor: pointer;
+    margin-left: 10px;
+    /* Reserviere den Platz für das Bild */
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
 }
 
-/* Reduziere die Opazität für die nicht aktive Flagge */
+
+/* Opazität für die aktive- und nicht-aktive Flagge */
 .inactive-flag {
-    opacity: 0.5;
+    opacity: 0.1;
+}
+
+.active-flag {
+    opacity: 0.3;
 }
 
 /* Platz für den Header schaffen */
 main {
-    margin-top: 60px; /* Platz für den festen Header */
-    text-align: center; /* Zentriert den Text horizontal */
+    margin-top: 60px;
+    /* Platz für den festen Header */
+    text-align: center;
+    /* Zentriert den Text horizontal */
 }
 
 /* Willkommenstext und Icon Styling */
@@ -92,14 +125,15 @@ main h2 {
 }
 
 main {
-    margin-top: 60px; /* Platz für den Header, damit der Text nicht dahinter verschwindet */
-    margin-left: 25%;  /* 25% der Seite links freihalten */
-    margin-right: 25%; /* 25% der Seite rechts freihalten */
-    text-align: center; /* Zentriert den Text horizontal */
+    margin-top: 60px;
+    /* Platz für den Header, damit der Text nicht dahinter verschwindet */
+    text-align: center;
+    /* Zentriert den Text horizontal */
     font-size: x-large;
 }
 
-.icon-left, .icon-right {
+.icon-left,
+.icon-right {
     margin: 0 30px;
 }
 
@@ -110,6 +144,7 @@ main {
 .contact-icon {
     margin-top: 20px;
     transition: transform 0.3s;
+    width: 30%;
 }
 
 .person-icon:hover,
@@ -117,7 +152,8 @@ main {
 .education-icon:hover,
 .skills-icon:hover,
 .contact-icon:hover {
-    transform: scale(1.1); /* Icons werden beim Hover etwas vergrößert */
+    transform: scale(1.1);
+    /* Icons werden beim Hover etwas vergrößert */
 }
 
 /* Animationen */
@@ -126,6 +162,7 @@ main {
         transform: translateX(100%);
         opacity: 0;
     }
+
     to {
         transform: translateX(0);
         opacity: 1;
@@ -137,6 +174,7 @@ main {
         transform: translateX(0);
         opacity: 1;
     }
+
     to {
         transform: translateX(100%);
         opacity: 0;
@@ -223,13 +261,19 @@ main {
 
 /* Kontaktformular Styling */
 .contact-form {
-    background-color: rgba(0, 0, 0, 0.9); /* Dunkler, halbtransparenter Hintergrund */
-    padding: 20px 40px; /* Mehr horizontales Padding für gleichmäßigen Abstand */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Dunkler, halbtransparenter Hintergrund */
+    padding: 20px 40px;
+    /* Mehr horizontales Padding für gleichmäßigen Abstand */
     border-radius: 10px;
-    width: 80%; /* Breite des Formulars anpassen */
-    max-width: 600px; /* Maximale Breite für größere Bildschirme */
-    margin: 0 auto; /* Zentriert das Formular auf der Seite */
-    margin-top: 50px; /* Verschiebe das Kontaktformular um 50px nach unten */
+    width: 80%;
+    /* Breite des Formulars anpassen */
+    max-width: 600px;
+    /* Maximale Breite für größere Bildschirme */
+    margin: 0 auto;
+    /* Zentriert das Formular auf der Seite */
+    margin-top: 50px;
+    /* Verschiebe das Kontaktformular um 50px nach unten */
 }
 
 .contact-form label {
@@ -237,20 +281,23 @@ main {
     margin-bottom: 10px;
     font-size: 18px;
     color: white;
-    text-align: center; /* Zentrieren für ein ordentliches Aussehen */
+    text-align: center;
+    /* Zentrieren für ein ordentliches Aussehen */
 }
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
-    width: 100%; /* Nutzt die gesamte Breite des Elterncontainers */
+    width: 100%;
+    /* Nutzt die gesamte Breite des Elterncontainers */
     padding: 10px;
     margin-bottom: 20px;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     color: black;
-    box-sizing: border-box; /* Padding in der Breitenberechnung einschließen */
+    box-sizing: border-box;
+    /* Padding in der Breitenberechnung einschließen */
 }
 
 .contact-form input[type="submit"] {
@@ -261,7 +308,8 @@ main {
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
-    width: 100%; /* Knopf über die gesamte Breite des Formulars */
+    width: 100%;
+    /* Knopf über die gesamte Breite des Formulars */
 }
 
 .contact-form input[type="submit"]:hover {
@@ -285,15 +333,18 @@ main {
 }
 
 #backToTop:hover {
-    transform: scale(1.2); /* Vergrößert den gesamten Button */
+    transform: scale(1.2);
+    /* Vergrößert den gesamten Button */
 }
 
 #backToTop:hover .arrow-up {
-    border-bottom-width: 36px; /* Vergrößert den Pfeil */
+    border-bottom-width: 36px;
+    /* Vergrößert den Pfeil */
 }
 
 #backToTop:hover .back-to-top-text {
-    font-size: 18px; /* Vergrößert den Text */
+    font-size: 18px;
+    /* Vergrößert den Text */
 }
 
 /* Pfeil nach oben (CSS-gestaltet) */
@@ -302,13 +353,16 @@ main {
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-bottom: 30px solid #FFD700; /* Farbe des Pfeils */
-    margin-bottom: 10px; /* Abstand zwischen dem Pfeil und dem Text */
+    border-bottom: 30px solid #FFD700;
+    /* Farbe des Pfeils */
+    margin-bottom: 10px;
+    /* Abstand zwischen dem Pfeil und dem Text */
 }
 
 /* Pfeil-Farbe bei Hover */
 #backToTop:hover .arrow-up {
-    border-bottom-color: #0047FF; /* Farbe bei Hover: Blau */
+    border-bottom-color: #0047FF;
+    /* Farbe bei Hover: Blau */
 }
 
 .back-to-top-text {
@@ -375,25 +429,52 @@ main {
     margin-bottom: 15px;
 }
 
+/* Bild im "About Me"-Bereich anpassen */
+.about-image img {
+    max-width: 100%;
+    /* Bild passt sich der Breite des Containers an */
+    height: auto;
+    /* Beibehaltung des Seitenverhältnisses */
+    border-radius: 10px;
+    /* Optional: Ecken des Bildes abrunden */
+}
+
 /* Nur die Punkte (discs) blau machen */
 .timeline-content ul li::marker {
     color: #FFCC00;
 }
 
-/* Responsive Design */
+
+/* Anpassungen für mobile Geräte */
 @media (max-width: 768px) {
+
+    /* Header-Bar Styling für mobiles Scrollen */
+    .header-bar {
+        display: block;
+        overflow-x: auto;
+        /* Ermöglicht horizontales Scrollen */
+        white-space: nowrap;
+        /* Verhindert das Umbrechen der Links */
+        padding: 10px 0;
+        /* Reduziere das Padding auf mobilen Geräten */
+        position: fixed;
+    }
+
     /* Header-Titel und Links verkleinern */
     .nav-link {
         font-size: 16px;
-        flex-shrink: 0; /* Verhindert, dass die Links zusammengeschoben werden */
+        display: inline-block;
     }
 
-    /* Stelle sicher, dass die Links nicht umbrechen */
-    .header-bar {
-        overflow-x: auto; /* Ermöglicht horizontales Scrollen auf mobilen Geräten */
-        white-space: nowrap; /* Verhindert Umbruch der Links */
+    /* Sprachumschalter-Positionierung */
+    .language-switcher {
+        position: fixed;
+        top: 50px;
+        left: 20px;
+        display: flex;
+        gap: 10px;
+        z-index: 1000;
     }
-
 
     /* Main-Titel anpassen */
     main h2 {
@@ -402,7 +483,9 @@ main {
     }
 
     /* Allgemeine Textausrichtung */
-    main p, main ul, main li {
+    main p,
+    main ul,
+    main li {
         font-size: 16px;
         text-align: center;
     }
@@ -410,7 +493,11 @@ main {
     /* Verschiebe das `main`-Element weiter nach unten */
     main {
         margin-top: 120px;
+        margin-left: 0;
+        margin-right: 0;
     }
+
+
 
     /* Icons im Home vergrößern */
     .person-icon,
@@ -418,9 +505,12 @@ main {
     .education-icon,
     .skills-icon,
     .contact-icon {
-        width: 20%; /* Vergrößert die Icons auf 20% der Breite */
-        height: auto; /* Erhält das Seitenverhältnis */
-        margin-top: 30px; /* Fügt mehr Abstand nach oben hinzu */
+        width: 50%;
+        /* Vergrößert die Icons auf 60% der Breite */
+        height: auto;
+        /* Erhält das Seitenverhältnis */
+        margin-top: 30px;
+        /* Fügt mehr Abstand nach oben hinzu */
     }
 
     /* Skills-Anpassungen */
@@ -443,6 +533,60 @@ main {
         font-size: 20px;
         padding: 8px 16px;
     }
+
+    /* Zentriere Inhalte in der Timeline */
+    .timeline-content {
+        text-align: center;
+    }
+
+    /* Passe die Größe und Position der Banner an */
+    .timeline-header h3 {
+        font-size: 1.5rem;
+        /* Passe die Schriftgröße an */
+        padding: 15px;
+        /* Mehr Innenabstand */
+        width: 90%;
+        /* Banner breiter machen */
+        margin: 0 auto;
+        /* Zentriere das Banner */
+        display: inline-block;
+        /* Macht das Banner auf der vollen Breite sichtbar */
+    }
+
+    /* Bild im "About Me"-Bereich anpassen */
+    .about-image img {
+        width: 80%;
+        /* Passe die Bildgröße auf mobilen Geräten an */
+        margin: 0 auto;
+        /* Zentriere das Bild */
+        display: block;
+        /* Stellt sicher, dass das Bild ein Block-Element ist */
+    }
+
+    /* Entferne Hover-Effekte für den "Back-to-Top"-Button auf mobilen Geräten */
+    #backToTop:hover {
+        transform: none;
+        /* Kein Vergrößern des Buttons */
+    }
+
+    #backToTop:hover .arrow-up {
+        border-bottom-width: 30px;
+        /* Behalte die Standardgröße des Pfeils */
+        border-bottom-color: #FFD700;
+        /* Behalte die Standardfarbe des Pfeils */
+    }
+
+    #backToTop:hover .back-to-top-text {
+        font-size: 16px;
+        /* Behalte die Standardgröße des Texts */
+    }
+
+    /* Back-to-Top Button beibehalten */
+    #backToTop {
+        right: 20px;
+        bottom: 40px;
+        position: fixed;
+    }
 }
 
 .language-switcher {
@@ -454,6 +598,16 @@ main {
 .language-flag {
     width: 30px;
     height: 20px;
-    cursor: pointer;
-    margin-left: 10px;
+    object-fit: contain;
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Platzhalter-Hintergrundfarbe */
+}
+
+
+@supports (-webkit-touch-callout: none) {
+    .header-bar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
 }
