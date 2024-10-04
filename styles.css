@@ -612,3 +612,100 @@ main {
         z-index: 1000;
     }
 }
+/* Toggle Switch Styles */
+.theme-switch-wrapper {
+    position: fixed;
+    top: 80px; /* Platzierung direkt unterhalb des Headers */
+    right: 20px; /* Abstand vom rechten Rand */
+    z-index: 100; /* Damit der Switch immer im Vordergrund bleibt */
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    background-color: white;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: 0.4s;
+    width: 26px;
+    border-radius: 50%;
+}
+
+/* Light mode (sun icon) */
+.slider.round:before {
+    background-image: url('sun-icon.png'); /* Verwende dein Sonnen-Icon */
+    background-size: cover;
+}
+
+/* Dark mode (moon icon) */
+input:checked + .slider {
+    background-color: #333;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+    background-image: url('moon-icon.png'); /* Verwende dein Mond-Icon */
+    background-size: cover;
+}
+
+/* Light Mode Styles */
+body.light-mode {
+    background: linear-gradient(135deg, #D3D3D3, #FFFFFF);
+    color: #333; /* Dunklere Farbe für den Text */
+}
+
+body.light-mode .header-bar {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+body.light-mode .nav-link {
+    color: #333;
+}
+
+body.light-mode .nav-link.active {
+    color: #0047FF !important;
+}
+
+body.light-mode .career-button,
+body.light-mode .education-button,
+body.light-mode .contact-form input[type="submit"] {
+    background-color: #CCCCCC;
+    color: #333;
+}
+
+body.light-mode .timeline-header h3 {
+    background-color: #999999;
+    color: #FFFFFF;
+}
+
+body.light-mode .slider {
+    background-color: #ccc;
+}
+
+body.light-mode .slider:before {
+    background-image: url('sun-icon.png');
+}
