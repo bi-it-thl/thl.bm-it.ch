@@ -62,6 +62,19 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Verhindere das Neuladen der Seite beim Klicken auf den aktiven Link im Header
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', (event) => {
+        const currentPage = window.location.pathname.split("/").pop();
+        const linkPage = link.getAttribute('href').split('?')[0];
+        if (currentPage === linkPage) {
+            // Wenn der Link zur aktuellen Seite führt, das Standardverhalten verhindern
+            event.preventDefault();
+        }
+    });
+});
+
+
     // Funktion für die Karriere-Timeline (Beruflicher Werdegang & Schulischer Werdegang)
     document.querySelectorAll('.career-button').forEach(button => {
         button.addEventListener('click', () => {
