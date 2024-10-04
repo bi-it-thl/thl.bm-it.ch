@@ -174,3 +174,58 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// Funktion zum Ändern der Bilder im Light/Dark Mode
+function toggleImages() {
+    const isLightMode = document.body.classList.contains('light-mode');
+
+    // Bilder austauschen
+    document.querySelectorAll('img').forEach(img => {
+        const originalSrc = img.getAttribute('src');
+
+        if (isLightMode) {
+            // Tausche auf die "light-mode"-Bilder um
+            if (originalSrc.includes('icon-career.png')) {
+                img.setAttribute('src', 'icon-career2.png');
+            } else if (originalSrc.includes('icon-person.png')) {
+                img.setAttribute('src', 'icon-person2.png');
+            } else if (originalSrc.includes('icon-education.png')) {
+                img.setAttribute('src', 'icon-education2.png');
+            } else if (originalSrc.includes('icon-skills.png')) {
+                img.setAttribute('src', 'icon-skills2.png');
+            } else if (originalSrc.includes('icon-contact.png')) {
+                img.setAttribute('src', 'icon-contact2.png');
+            } else if (originalSrc.includes('icon-imprint.png')) {
+                img.setAttribute('src', 'icon-imprint2.png');
+            }
+        } else {
+            // Setze auf die "dark-mode"-Bilder zurück
+            if (originalSrc.includes('icon-career2.png')) {
+                img.setAttribute('src', 'icon-career.png');
+            } else if (originalSrc.includes('icon-person2.png')) {
+                img.setAttribute('src', 'icon-person.png');
+            } else if (originalSrc.includes('icon-education2.png')) {
+                img.setAttribute('src', 'icon-education.png');
+            } else if (originalSrc.includes('icon-skills2.png')) {
+                img.setAttribute('src', 'icon-skills.png');
+            } else if (originalSrc.includes('icon-contact2.png')) {
+                img.setAttribute('src', 'icon-contact.png');
+            } else if (originalSrc.includes('icon-imprint2.png')) {
+                img.setAttribute('src', 'icon-imprint.png');
+            }
+        }
+    });
+}
+
+// Event-Listener für den Toggle-Switch
+document.getElementById('theme-checkbox').addEventListener('change', () => {
+    document.body.classList.toggle('light-mode');
+    toggleImages(); // Aktualisiere die Bilder je nach Modus
+});
+
+// Initiales Aufrufen der Funktion beim Laden der Seite
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.body.classList.contains('light-mode')) {
+        toggleImages();
+    }
+});

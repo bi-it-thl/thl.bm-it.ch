@@ -360,11 +360,11 @@ main {
     /* Abstand zwischen dem Pfeil und dem Text */
 }
 
-/* Pfeil-Farbe bei Hover */
-#backToTop:hover .arrow-up {
-    border-bottom-color: #0047FF;
-    /* Farbe bei Hover: Blau */
+/* Pfeil-Farbe bei Hover im Light Mode */
+body.light-mode #backToTop:hover .arrow-up {
+    border-bottom-color: darkgray; /* Farbe im Light Mode auf Dunkelgrau */
 }
+
 
 .back-to-top-text {
     font-size: 16px;
@@ -659,7 +659,7 @@ main {
 
 /* Light mode (sun icon) */
 .slider.round:before {
-    /* background-image: url('moon-icon.png'); /* Verwende Sonnen-Icon */
+    /* background-image: url('moon-icon.png');  Verwende Sonnen-Icon */
     background-size: cover;
 }
 
@@ -670,7 +670,7 @@ input:checked + .slider {
 
 input:checked + .slider::before {
     transform: translateX(26px);
-    /* background-image: url('moon-icon.png'); /* Verwende Mond-Icon */
+   /*  background-image: url('moon-icon.png'); Verwende Mond-Icon */
     background-size: cover;
 }
 
@@ -680,32 +680,77 @@ body.light-mode {
     color: #333; /* Dunklere Farbe für den Text */
 }
 
+body.light-mode h2{
+    color: darkgray;
+}
+
+body.light-mode ul li::marker {
+    color: black;
+}
+
+body.light-mode ul {
+    color: black;
+}
+
+body.light-mode h3{
+    color: black;
+}
+
 body.light-mode .header-bar {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #0047FF;
 }
 
 body.light-mode .nav-link {
-    color: #333;
+    color: wheat;
 }
 
+
 body.light-mode .nav-link.active {
-    color: #0047FF !important;
+    color: darkgray !important;
 }
 
 body.light-mode .career-button,
 body.light-mode .education-button,
 body.light-mode .contact-form input[type="submit"] {
-    background-color: #CCCCCC;
-    color: #333;
+    background-color: #0047FF;
+    color: wheat;
 }
 
 body.light-mode .timeline-header h3 {
-    background-color: #999999;
-    color: #FFFFFF;
+    background-color: #0047FF;
+    color: wheat;
 }
+
+/* Hover-Farbe für Buttons im Light Mode */
+body.light-mode .career-button:hover,
+body.light-mode .education-button:hover {
+    background-color: darkgray; /* Farbe im Light Mode auf Dunkelgrau */
+}
+
 
 body.light-mode .slider {
     background-color: #ccc;
+}
+
+body.light-mode .back-to-top-text {
+    color: black;
+}
+
+/* Pfeil-Farbe bei Hover */
+.body.light-mode #backToTop:hover .arrow-up {
+    border-bottom-color: darkgray;
+    /* Farbe bei Hover: Blau */
+}
+
+body.light-mode .arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 30px solid #0047FF;
+    /* Farbe des Pfeils */
+    margin-bottom: 10px;
+    /* Abstand zwischen dem Pfeil und dem Text */
 }
 
 /* body.light-mode .slider:before {
