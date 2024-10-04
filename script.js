@@ -138,3 +138,5 @@ function updateLinks(language) {
         link.setAttribute('href', `${href}?lang=${language}`);
     });
 }
+
+

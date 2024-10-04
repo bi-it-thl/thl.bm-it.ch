@@ -409,12 +409,12 @@ main {
 
 .timeline-content h3 {
     margin-top: 0;
-    color: #FFCC00;
+    color: wheat;
 }
 
 .timeline-content h2 {
     margin-top: auto;
-    color: #FFCC00;
+    color: wheat;
 }
 
 .timeline-content p {
@@ -442,7 +442,7 @@ main {
 
 /* Nur die Punkte (discs) blau machen */
 .timeline-content ul li::marker {
-    color: #FFCC00;
+    color: white;
 }
 
 
