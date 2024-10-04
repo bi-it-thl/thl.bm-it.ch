@@ -61,6 +61,25 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
         });
     }
+
+    // Funktion für die Karriere-Timeline (Beruflicher Werdegang & Schulischer Werdegang)
+    document.querySelectorAll('.career-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const targetId = button.getAttribute('data-target');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                const headerOffset = 100; // Die Höhe des Abstands in Pixeln
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.scrollY - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 });
 
 // Funktion, um die Header-Scrollposition zu speichern
