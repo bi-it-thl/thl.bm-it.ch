@@ -343,6 +343,11 @@ main {
     /* Vergrößert den Pfeil */
 }
 
+#backToTop:hover .arrow-up {
+    border-bottom-color: #0047FF;
+    /* ändern der Pfeilfarbe */
+}
+
 #backToTop:hover .back-to-top-text {
     font-size: 18px;
     /* Vergrößert den Text */
@@ -358,11 +363,6 @@ main {
     /* Farbe des Pfeils */
     margin-bottom: 10px;
     /* Abstand zwischen dem Pfeil und dem Text */
-}
-
-/* Pfeil-Farbe bei Hover im Light Mode */
-body.light-mode #backToTop:hover .arrow-up {
-    border-bottom-color: darkgray; /* Farbe im Light Mode auf Dunkelgrau */
 }
 
 
@@ -736,10 +736,9 @@ body.light-mode .back-to-top-text {
     color: black;
 }
 
-/* Pfeil-Farbe bei Hover */
-.body.light-mode #backToTop:hover .arrow-up {
-    border-bottom-color: darkgray;
-    /* Farbe bei Hover: Blau */
+/* Pfeil-Farbe bei Hover im Light Mode */
+body.light-mode #backToTop:hover .arrow-up {
+    border-bottom-color: darkgray; /* Farbe im Light Mode auf Dunkelgrau */
 }
 
 body.light-mode .arrow-up {

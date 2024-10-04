@@ -185,33 +185,33 @@ function toggleImages() {
 
         if (isLightMode) {
             // Tausche auf die "light-mode"-Bilder um
-            if (originalSrc.includes('icon-career.png')) {
-                img.setAttribute('src', 'icon-career2.png');
-            } else if (originalSrc.includes('icon-person.png')) {
-                img.setAttribute('src', 'icon-person2.png');
+            if (originalSrc.includes('img/icon-career.png')) {
+                img.setAttribute('src', 'img/icon-career2.png');
+            } else if (originalSrc.includes('img/icon-person.png')) {
+                img.setAttribute('src', 'img/icon-person2.png');
             } else if (originalSrc.includes('icon-education.png')) {
-                img.setAttribute('src', 'icon-education2.png');
-            } else if (originalSrc.includes('icon-skills.png')) {
-                img.setAttribute('src', 'icon-skills2.png');
-            } else if (originalSrc.includes('icon-contact.png')) {
-                img.setAttribute('src', 'icon-contact2.png');
-            } else if (originalSrc.includes('icon-imprint.png')) {
-                img.setAttribute('src', 'icon-imprint2.png');
+                img.setAttribute('src', 'img/icon-education2.png');
+            } else if (originalSrc.includes('img/icon-skills.png')) {
+                img.setAttribute('src', 'img/icon-skills2.png');
+            } else if (originalSrc.includes('img/icon-contact.png')) {
+                img.setAttribute('src', 'img/icon-contact2.png');
+            } else if (originalSrc.includes('img/icon-imprint.png')) {
+                img.setAttribute('src', 'img/icon-imprint2.png');
             }
         } else {
             // Setze auf die "dark-mode"-Bilder zurück
-            if (originalSrc.includes('icon-career2.png')) {
-                img.setAttribute('src', 'icon-career.png');
-            } else if (originalSrc.includes('icon-person2.png')) {
-                img.setAttribute('src', 'icon-person.png');
-            } else if (originalSrc.includes('icon-education2.png')) {
-                img.setAttribute('src', 'icon-education.png');
-            } else if (originalSrc.includes('icon-skills2.png')) {
-                img.setAttribute('src', 'icon-skills.png');
-            } else if (originalSrc.includes('icon-contact2.png')) {
-                img.setAttribute('src', 'icon-contact.png');
-            } else if (originalSrc.includes('icon-imprint2.png')) {
-                img.setAttribute('src', 'icon-imprint.png');
+            if (originalSrc.includes('img/icon-career2.png')) {
+                img.setAttribute('src', 'img/icon-career.png');
+            } else if (originalSrc.includes('img/icon-person2.png')) {
+                img.setAttribute('src', 'img/icon-person.png');
+            } else if (originalSrc.includes('img/icon-education2.png')) {
+                img.setAttribute('src', 'img/icon-education.png');
+            } else if (originalSrc.includes('img/icon-skills2.png')) {
+                img.setAttribute('src', 'img/icon-skills.png');
+            } else if (originalSrc.includes('img/icon-contact2.png')) {
+                img.setAttribute('src', 'img/icon-contact.png');
+            } else if (originalSrc.includes('img/icon-imprint2.png')) {
+                img.setAttribute('src', 'img/icon-imprint.png');
             }
         }
     });
