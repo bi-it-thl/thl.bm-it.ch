@@ -612,6 +612,8 @@ main {
         z-index: 1000;
     }
 }
+
+
 /* Toggle Switch Styles */
 .theme-switch-wrapper {
     position: fixed;
@@ -657,7 +659,7 @@ main {
 
 /* Light mode (sun icon) */
 .slider.round:before {
-    background-image: url('sun-icon.png'); /* Verwende dein Sonnen-Icon */
+    background-image: url('moon-icon.png'); /* Verwende Sonnen-Icon */
     background-size: cover;
 }
 
@@ -666,9 +668,9 @@ input:checked + .slider {
     background-color: #333;
 }
 
-input:checked + .slider:before {
+input:checked + .slider::before {
     transform: translateX(26px);
-    background-image: url('moon-icon.png'); /* Verwende dein Mond-Icon */
+    background-image: url('moon-icon.png'); /* Verwende Mond-Icon */
     background-size: cover;
 }
 
