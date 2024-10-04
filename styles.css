@@ -6,6 +6,7 @@ body {
     background-size: cover;
     /* Stellt sicher, dass der Verlauf die gesamte Seite abdeckt */
     background-color: #1C1C1C;
+    color: white
 }
 
 /* Entferne jegliche Hintergrundfarbe von main */
