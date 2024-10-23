@@ -227,9 +227,8 @@ main h2 {
     border: 2px solid #FFCC00 !important;
 }
 
-span.filled .skill-rating {
-    background-color: #FFCC00 !important;
-    border-color: #FFCC00 !important;
+.filled {
+    background-color:#FFCC00;
 }
 
 
@@ -578,6 +577,18 @@ input:checked + .slider::before {
 body.light-mode {
     background: linear-gradient(135deg, #D3D3D3, #FFFFFF);
     color: #333;
+}
+
+body.light-mode .skill-rating span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #0047FF !important;
+}
+
+body.light-mode .filled{
+    background-color: #0047FF;
 }
 
 body.light-mode h2 {
