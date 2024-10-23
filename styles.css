@@ -253,11 +253,11 @@ main {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 2px solid #FFCC00;
+    border: 2px solid #FFCC00 !important;
 }
 
 .filled {
-    background-color: #FFCC00;
+    background-color: #FFCC00 !important;
 }
 
 /* Kontaktformular Styling */
