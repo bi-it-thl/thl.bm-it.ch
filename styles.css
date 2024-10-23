@@ -212,7 +212,7 @@ main {
 
 .career-button,
 .education-button {
-    background-color: #FFCC00;
+    background-color: #0047FF;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -224,7 +224,7 @@ main {
 
 .career-button:hover,
 .education-button:hover {
-    background-color: #002D99;
+    background-color: #0047FF;
 }
 
 /* Skills Styling */
