@@ -227,7 +227,7 @@ main h2 {
     border: 2px solid #FFCC00 !important;
 }
 
-.skills-container .skill-rating span.filled {
+span.filled {
     background-color: #FFCC00 !important;
     border-color: #FFCC00 !important;
 }
