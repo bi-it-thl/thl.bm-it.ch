@@ -314,7 +314,7 @@ main {
 }
 
 .contact-form input[type="submit"]:hover {
-    background-color: #FFD700;
+    background-color: #FFCC00;
 }
 
 /* Back-to-Top Button Styling */
@@ -359,7 +359,7 @@ main {
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-bottom: 30px solid #FFD700;
+    border-bottom: 30px solid #FFCC00;
     /* Farbe des Pfeils */
     margin-bottom: 10px;
     /* Abstand zwischen dem Pfeil und dem Text */
@@ -573,7 +573,7 @@ main {
     #backToTop:hover .arrow-up {
         border-bottom-width: 30px;
         /* Behalte die Standardgröße des Pfeils */
-        border-bottom-color: #FFD700;
+        border-bottom-color: #FFCC00;
         /* Behalte die Standardfarbe des Pfeils */
     }
 
