@@ -6,7 +6,7 @@ body {
     background-size: cover;
     /* Stellt sicher, dass der Verlauf die gesamte Seite abdeckt */
     background-color: #1C1C1C;
-    color: white
+    color: white;
 }
 
 /* Entferne jegliche Hintergrundfarbe von main */
@@ -16,18 +16,14 @@ main {
     margin-top: 60px;
     /* Platz für den festen Header */
     margin-left: 25%;
-    /* 25% der Seite links freihalten */
     margin-right: 25%;
-    /* 25% der Seite rechts freihalten */
     text-align: center;
-    /* Zentriert den Text horizontal */
     font-size: x-large;
 }
 
 /* Titel im Kontaktbereich weiter nach unten setzen */
 .page h2 {
     margin-top: 100px;
-    /* Schiebt den Titel um 50px nach unten */
 }
 
 /* Header Navigation Styling */
@@ -35,10 +31,8 @@ main {
     background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: flex-start;
-    /* Startet die Links von links aus */
     align-items: center;
     padding: 10px 20px;
-    /* Leichtes Padding für den Header */
     position: fixed;
     top: 0;
     left: 0;
@@ -46,40 +40,30 @@ main {
     z-index: 1000;
     box-sizing: border-box;
     overflow-x: auto;
-    /* Ermöglicht horizontales Scrollen */
     white-space: nowrap;
-    /* Verhindert Zeilenumbruch der Links */
 }
 
 /* Anpassung nur für den englischen Header */
 .english-header {
     justify-content: center;
-    /* Zentriere die Links im Header */
     gap: 30px;
-    /* Abstand zwischen den Links */
 }
 
 .english-header .nav-link {
     flex: 1;
-    /* Links nehmen gleichmäßig Platz ein */
     text-align: center;
-    /* Text innerhalb der Links zentrieren */
 }
 
 .nav-link {
     margin: 0 50px;
-    /* Abstände zwischen den Links */
     color: white;
-    /* Standardfarbe */
     text-decoration: none;
-    /* Kein Unterstrich */
     font-size: 24px;
     font-weight: bold;
 }
 
 .nav-link.active {
     color: #FFCC00 !important;
-    /* Gelbe Farbe für die aktive Seite */
 }
 
 /* Language switcher styling */
@@ -87,7 +71,6 @@ main {
     display: flex;
     align-items: center;
     gap: 10px;
-    /* Abstand zwischen den Flaggen */
 }
 
 .language-flag {
@@ -95,12 +78,10 @@ main {
     height: 20px;
     cursor: pointer;
     margin-left: 10px;
-    /* Reserviere den Platz für das Bild */
     display: inline-block;
     background-size: cover;
     background-position: center;
 }
-
 
 /* Opazität für die aktive- und nicht-aktive Flagge */
 .inactive-flag {
@@ -114,23 +95,14 @@ main {
 /* Platz für den Header schaffen */
 main {
     margin-top: 60px;
-    /* Platz für den festen Header */
     text-align: center;
-    /* Zentriert den Text horizontal */
+    font-size: x-large;
 }
 
 /* Willkommenstext und Icon Styling */
 main h2 {
     font-size: 24px;
     color: white;
-}
-
-main {
-    margin-top: 60px;
-    /* Platz für den Header, damit der Text nicht dahinter verschwindet */
-    text-align: center;
-    /* Zentriert den Text horizontal */
-    font-size: x-large;
 }
 
 .icon-left,
@@ -154,7 +126,6 @@ main {
 .skills-icon:hover,
 .contact-icon:hover {
     transform: scale(1.1);
-    /* Icons werden beim Hover etwas vergrößert */
 }
 
 /* Animationen */
@@ -256,25 +227,19 @@ main {
     border: 2px solid #FFCC00 !important;
 }
 
-.filled {
+.skills-container .skill-rating .filled {
     background-color: #FFCC00 !important;
 }
 
 /* Kontaktformular Styling */
 .contact-form {
     background-color: rgba(0, 0, 0, 0.9);
-    /* Dunkler, halbtransparenter Hintergrund */
     padding: 20px 40px;
-    /* Mehr horizontales Padding für gleichmäßigen Abstand */
     border-radius: 10px;
     width: 80%;
-    /* Breite des Formulars anpassen */
     max-width: 600px;
-    /* Maximale Breite für größere Bildschirme */
     margin: 0 auto;
-    /* Zentriert das Formular auf der Seite */
     margin-top: 50px;
-    /* Verschiebe das Kontaktformular um 50px nach unten */
 }
 
 .contact-form label {
@@ -283,14 +248,12 @@ main {
     font-size: 18px;
     color: white;
     text-align: center;
-    /* Zentrieren für ein ordentliches Aussehen */
 }
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
     width: 100%;
-    /* Nutzt die gesamte Breite des Elterncontainers */
     padding: 10px;
     margin-bottom: 20px;
     border: none;
@@ -298,7 +261,6 @@ main {
     font-size: 16px;
     color: black;
     box-sizing: border-box;
-    /* Padding in der Breitenberechnung einschließen */
 }
 
 .contact-form input[type="submit"] {
@@ -310,7 +272,6 @@ main {
     cursor: pointer;
     font-size: 18px;
     width: 100%;
-    /* Knopf über die gesamte Breite des Formulars */
 }
 
 .contact-form input[type="submit"]:hover {
@@ -335,36 +296,25 @@ main {
 
 #backToTop:hover {
     transform: scale(1.2);
-    /* Vergrößert den gesamten Button */
 }
 
 #backToTop:hover .arrow-up {
     border-bottom-width: 36px;
-    /* Vergrößert den Pfeil */
-}
-
-#backToTop:hover .arrow-up {
     border-bottom-color: #0047FF;
-    /* ändern der Pfeilfarbe */
 }
 
 #backToTop:hover .back-to-top-text {
     font-size: 18px;
-    /* Vergrößert den Text */
 }
 
-/* Pfeil nach oben (CSS-gestaltet) */
 .arrow-up {
     width: 0;
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-bottom: 30px solid #FFCC00;
-    /* Farbe des Pfeils */
     margin-bottom: 10px;
-    /* Abstand zwischen dem Pfeil und dem Text */
 }
-
 
 .back-to-top-text {
     font-size: 16px;
@@ -374,7 +324,7 @@ main {
     opacity: 0.8;
 }
 
-/* Gesamtstil der Timeline */
+/* Timeline Styling */
 .timeline-section {
     margin: 40px 0;
     padding: 0;
@@ -382,7 +332,6 @@ main {
     background-color: transparent;
 }
 
-/* Header-Stil (Datum) */
 .timeline-header {
     width: 100%;
     margin-bottom: 10px;
@@ -399,7 +348,6 @@ main {
     border-radius: 8px;
 }
 
-/* Inhalt-Stil */
 .timeline-content {
     padding: 10px;
     background-color: transparent;
@@ -430,44 +378,32 @@ main {
     margin-bottom: 15px;
 }
 
-/* Bild im "About Me"-Bereich anpassen */
-.about-image img {
-    max-width: 100%;
-    /* Bild passt sich der Breite des Containers an */
-    height: auto;
-    /* Beibehaltung des Seitenverhältnisses */
-    border-radius: 10px;
-    /* Optional: Ecken des Bildes abrunden */
-}
-
-/* Nur die Punkte (discs) blau machen */
 .timeline-content ul li::marker {
     color: white;
 }
 
+/* Bild im "About Me"-Bereich anpassen */
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
 
 /* Anpassungen für mobile Geräte */
 @media (max-width: 768px) {
-
-    /* Header-Bar Styling für mobiles Scrollen */
     .header-bar {
         display: block;
         overflow-x: auto;
-        /* Ermöglicht horizontales Scrollen */
         white-space: nowrap;
-        /* Verhindert das Umbrechen der Links */
         padding: 10px 0;
-        /* Reduziere das Padding auf mobilen Geräten */
         position: fixed;
     }
 
-    /* Header-Titel und Links verkleinern */
     .nav-link {
         font-size: 16px;
         display: inline-block;
     }
 
-    /* Sprachumschalter-Positionierung */
     .language-switcher {
         position: fixed;
         top: 50px;
@@ -477,13 +413,11 @@ main {
         z-index: 1000;
     }
 
-    /* Main-Titel anpassen */
     main h2 {
         font-size: 20px;
         text-align: center;
     }
 
-    /* Allgemeine Textausrichtung */
     main p,
     main ul,
     main li {
@@ -491,30 +425,22 @@ main {
         text-align: center;
     }
 
-    /* Verschiebe das `main`-Element weiter nach unten */
     main {
         margin-top: 120px;
         margin-left: 0;
         margin-right: 0;
     }
 
-
-
-    /* Icons im Home vergrößern */
     .person-icon,
     .career-icon,
     .education-icon,
     .skills-icon,
     .contact-icon {
         width: 50%;
-        /* Vergrößert die Icons auf 60% der Breite */
         height: auto;
-        /* Erhält das Seitenverhältnis */
         margin-top: 30px;
-        /* Fügt mehr Abstand nach oben hinzu */
     }
 
-    /* Skills-Anpassungen */
     .skills-container {
         width: 100%;
     }
@@ -523,66 +449,47 @@ main {
         flex-direction: column;
     }
 
-    /* Kontaktformular Anpassung */
     .contact-form {
         padding: 10px;
     }
 
-    /* Timeline Button Anpassung */
     .career-button,
     .education-button {
         font-size: 20px;
         padding: 8px 16px;
     }
 
-    /* Zentriere Inhalte in der Timeline */
     .timeline-content {
         text-align: center;
     }
 
-    /* Passe die Größe und Position der Banner an */
     .timeline-header h3 {
         font-size: 1.5rem;
-        /* Passe die Schriftgröße an */
         padding: 15px;
-        /* Mehr Innenabstand */
         width: 90%;
-        /* Banner breiter machen */
         margin: 0 auto;
-        /* Zentriere das Banner */
         display: inline-block;
-        /* Macht das Banner auf der vollen Breite sichtbar */
     }
 
-    /* Bild im "About Me"-Bereich anpassen */
     .about-image img {
         width: 80%;
-        /* Passe die Bildgröße auf mobilen Geräten an */
         margin: 0 auto;
-        /* Zentriere das Bild */
         display: block;
-        /* Stellt sicher, dass das Bild ein Block-Element ist */
     }
 
-    /* Entferne Hover-Effekte für den "Back-to-Top"-Button auf mobilen Geräten */
     #backToTop:hover {
         transform: none;
-        /* Kein Vergrößern des Buttons */
     }
 
     #backToTop:hover .arrow-up {
         border-bottom-width: 30px;
-        /* Behalte die Standardgröße des Pfeils */
         border-bottom-color: #FFCC00;
-        /* Behalte die Standardfarbe des Pfeils */
     }
 
     #backToTop:hover .back-to-top-text {
         font-size: 16px;
-        /* Behalte die Standardgröße des Texts */
     }
 
-    /* Back-to-Top Button beibehalten */
     #backToTop {
         right: 20px;
         bottom: 40px;
@@ -601,9 +508,7 @@ main {
     height: 20px;
     object-fit: contain;
     background-color: rgba(0, 0, 0, 0.1);
-    /* Platzhalter-Hintergrundfarbe */
 }
-
 
 @supports (-webkit-touch-callout: none) {
     .header-bar {
@@ -613,13 +518,12 @@ main {
     }
 }
 
-
 /* Toggle Switch Styles */
 .theme-switch-wrapper {
     position: fixed;
-    top: 80px; /* Platzierung direkt unterhalb des Headers */
-    right: 20px; /* Abstand vom rechten Rand */
-    z-index: 100; /* Damit der Switch immer im Vordergrund bleibt */
+    top: 80px;
+    right: 20px;
+    z-index: 100;
 }
 
 .theme-switch {
@@ -657,30 +561,24 @@ main {
     border-radius: 50%;
 }
 
-/* Light mode (sun icon) */
 .slider.round:before {
-    /* background-image: url('moon-icon.png');  Verwende Sonnen-Icon */
     background-size: cover;
 }
 
-/* Dark mode (moon icon) */
 input:checked + .slider {
     background-color: #333;
 }
 
 input:checked + .slider::before {
     transform: translateX(26px);
-   /*  background-image: url('moon-icon.png'); Verwende Mond-Icon */
-    background-size: cover;
 }
 
-/* Light Mode Styles */
 body.light-mode {
     background: linear-gradient(135deg, #D3D3D3, #FFFFFF);
-    color: #333; /* Dunklere Farbe für den Text */
+    color: #333;
 }
 
-body.light-mode h2{
+body.light-mode h2 {
     color: darkgray;
 }
 
@@ -692,7 +590,7 @@ body.light-mode ul {
     color: black;
 }
 
-body.light-mode h3{
+body.light-mode h3 {
     color: black;
 }
 
@@ -703,7 +601,6 @@ body.light-mode .header-bar {
 body.light-mode .nav-link {
     color: wheat;
 }
-
 
 body.light-mode .nav-link.active {
     color: darkgray !important;
@@ -721,12 +618,10 @@ body.light-mode .timeline-header h3 {
     color: wheat;
 }
 
-/* Hover-Farbe für Buttons im Light Mode */
 body.light-mode .career-button:hover,
 body.light-mode .education-button:hover {
-    background-color: darkgray; /* Farbe im Light Mode auf Dunkelgrau */
+    background-color: darkgray;
 }
-
 
 body.light-mode .slider {
     background-color: #ccc;
@@ -736,22 +631,10 @@ body.light-mode .back-to-top-text {
     color: black;
 }
 
-/* Pfeil-Farbe bei Hover im Light Mode */
 body.light-mode #backToTop:hover .arrow-up {
-    border-bottom-color: darkgray; /* Farbe im Light Mode auf Dunkelgrau */
+    border-bottom-color: darkgray;
 }
 
 body.light-mode .arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
     border-bottom: 30px solid #0047FF;
-    /* Farbe des Pfeils */
-    margin-bottom: 10px;
-    /* Abstand zwischen dem Pfeil und dem Text */
 }
-
-/* body.light-mode .slider:before {
-    background-image: url('sun-icon.png');
-} */
