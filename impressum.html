@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impressum</title>
+    <title>Imprint</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
+    <!-- Header with navigation -->
     <header>
         <div class="header-bar">
+            <!-- Navigation links with English and German labels for language switching -->
             <a href="index.html" class="nav-link" id="home-link" data-en="Home" data-de="Home">Home</a>
-            <a href="about.html" class="nav-link" id="about-link" data-en="About Me" data-de="Über mich">Über mich</a>
-            <a href="career.html" class="nav-link" id="career-link" data-en="Career"
-                data-de="Beruflicher Werdegang">Beruflicher Werdegang</a>
-            <a href="education.html" class="nav-link" id="education-link" data-en="Education"
-                data-de="Schulischer Werdegang">Schulischer Werdegang</a>
-            <a href="skills.html" class="nav-link" id="skills-link" data-en="Skills"
-                data-de="Fähigkeiten">Fähigkeiten</a>
-            <a href="contact.html" class="nav-link" id="contact-link" data-en="Contact" data-de="Kontakt">Kontakt</a>
-            <a href="impressum.html" class="nav-link active" id="impressum-link" data-en="Imprint"
-                data-de="Impressum">Impressum</a>
+            <a href="about.html" class="nav-link" id="about-link" data-en="About Me" data-de="Über mich">About Me</a>
+            <a href="career.html" class="nav-link" id="career-link" data-en="Career" data-de="Beruflicher Werdegang">Career</a>
+            <a href="education.html" class="nav-link" id="education-link" data-en="Education" data-de="Schulischer Werdegang">Education</a>
+            <a href="skills.html" class="nav-link" id="skills-link" data-en="Skills" data-de="Fähigkeiten">Skills</a>
+            <a href="contact.html" class="nav-link" id="contact-link" data-en="Contact" data-de="Kontakt">Contact</a>
+            <a href="impressum.html" class="nav-link active" id="impressum-link" data-en="Imprint" data-de="Impressum">Imprint</a>
 
-            <!-- Sprachumschalter-Buttons -->
+            <!-- Language switcher buttons -->
             <div class="language-switcher">
                 <img src="img/flag-de.png" alt="Deutsch" id="de-flag" class="language-flag">
                 <img src="img/flag-en.png" alt="English" id="en-flag" class="language-flag">
@@ -32,17 +30,18 @@
         </div>
     </header>
 
-            <!-- Toggle Switch für Dark/Light Mode -->
-            <div class="theme-switch-wrapper">
-                <label class="theme-switch" for="theme-checkbox">
-                    <input type="checkbox" id="theme-checkbox">
-                    <div class="slider round"></div>
-                </label>
-            </div>
+    <!-- Toggle Switch for Dark/Light Mode -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-checkbox">
+            <input type="checkbox" id="theme-checkbox">
+            <div class="slider round"></div>
+        </label>
+    </div>
 
+    <!-- Main section with imprint content -->
     <main class="page">
-        <h2 data-en="Imprint" data-de="Impressum">Impressum</h2>
-        <p data-en="Information according to § 5 TMG" data-de="Angaben gemäss § 5 TMG">Angaben gemäß § 5 TMG</p>
+        <h2 data-en="Imprint" data-de="Impressum">Imprint</h2>
+        <p data-en="Information according to § 5 TMG" data-de="Angaben gemäss § 5 TMG">Information according to § 5 TMG</p>
 
         <p>
             <span data-en="Loris Etienne Thuli" data-de="Loris Etienne Thuli">Loris Etienne Thuli</span><br>
@@ -50,21 +49,19 @@
             <span data-en="5603 Staufen" data-de="5603 Staufen">5603 Staufen</span>
         </p>
 
-        <h2 data-en="Contact" data-de="Kontakt">Kontakt</h2>
+        <h2 data-en="Contact" data-de="Kontakt">Contact</h2>
         <p>
-            <span data-en="Email" data-de="E-Mail">E-Mail</span>: <a
-                href="mailto:loris.thuli@gmail.com">loris.thuli@gmail.com</a><br>
-            <span data-en="Phone" data-de="Telefon">Telefon</span>: 076 395 94 98
+            <span data-en="Email" data-de="E-Mail">Email</span>: <a href="mailto:loris.thuli@gmail.com">loris.thuli@gmail.com</a><br>
+            <span data-en="Phone" data-de="Telefon">Phone</span>: 076 395 94 98
         </p>
 
-        <h2 data-en="Responsible for the content according to § 55 Abs. 2 RStV"
-            data-de="Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV">Verantwortlich für den Inhalt nach § 55 Abs. 2
-            RStV</h2>
+        <h2 data-en="Responsible for the content according to § 55 Abs. 2 RStV" data-de="Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV">Responsible for the content according to § 55 Abs. 2 RStV</h2>
         <p>
             <span data-en="Loris Etienne Thuli" data-de="Loris Etienne Thuli">Loris Etienne Thuli</span>
         </p>
     </main>
 
+    <!-- Back-to-Top Button -->
     <div id="backToTop">
         <svg class="arrow-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
             <path fill="#FFD700" d="M12 2l-10 18h20z"></path>
@@ -72,15 +69,16 @@
         <span class="back-to-top-text" data-en="Back to Top" data-de="Back to Top">Back to Top</span>
     </div>
 
-
+    <!-- JavaScript to set the language on page load -->
     <script>
-        // Setze die Sprache beim Laden der Seite
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
-            const lang = urlParams.get('lang') || localStorage.getItem('language') || 'de';
+            const lang = urlParams.get('lang') || localStorage.getItem('language') || 'en';
             changeLanguage(lang);
         });
     </script>
+
+    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 
 </body>
