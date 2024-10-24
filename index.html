@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meine Webseite</title>
+    <title>My Website</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -14,18 +14,18 @@
 
         <div class="header-bar">
             <a href="index.html" class="nav-link active" id="home-link" data-en="Home" data-de="Home">Home</a>
-            <a href="about.html" class="nav-link" id="about-link" data-en="About Me" data-de="Über mich">Über mich</a>
+            <a href="about.html" class="nav-link" id="about-link" data-en="About Me" data-de="Über mich">About Me</a>
             <a href="career.html" class="nav-link" id="career-link" data-en="Career"
-                data-de="Beruflicher Werdegang">Beruflicher Werdegang</a>
+                data-de="Beruflicher Werdegang">Career</a>
             <a href="education.html" class="nav-link" id="education-link" data-en="Education"
-                data-de="Schulischer Werdegang">Schulischer Werdegang</a>
+                data-de="Schulischer Werdegang">Education</a>
             <a href="skills.html" class="nav-link" id="skills-link" data-en="Skills"
-                data-de="Fähigkeiten">Fähigkeiten</a>
-            <a href="contact.html" class="nav-link" id="contact-link" data-en="Contact" data-de="Kontakt">Kontakt</a>
+                data-de="Fähigkeiten">Skills</a>
+            <a href="contact.html" class="nav-link" id="contact-link" data-en="Contact" data-de="Kontakt">Contact</a>
             <a href="impressum.html" class="nav-link" id="impressum-link" data-en="Imprint"
-                data-de="Impressum">Impressum</a>
+                data-de="Impressum">Imprint</a>
 
-            <!-- Sprachumschalter-Buttons -->
+            <!-- Language switcher buttons -->
             <div class="language-switcher">
                 <img src="img/flag-de.png" alt="Deutsch" id="de-flag" class="language-flag">
                 <img src="img/flag-en.png" alt="English" id="en-flag" class="language-flag">
@@ -33,7 +33,7 @@
         </div>
     </header>
 
-            <!-- Toggle Switch für Dark/Light Mode -->
+            <!-- Toggle Switch for Dark/Light Mode -->
             <div class="theme-switch-wrapper">
                 <label class="theme-switch" for="theme-checkbox">
                     <input type="checkbox" id="theme-checkbox">
@@ -42,35 +42,31 @@
             </div>
 
     <main class="page">
-        <h3 data-en="Welcome to my website!" data-de="Willkommen auf meiner Webseite!">Willkommen auf meiner Webseite!
-        </h3>
-        <h3 data-en="Who am I?" data-de="Wer bin ich?">Wer bin ich?</h3>
+        <h3 data-en="Welcome to my website!" data-de="Willkommen auf meiner Webseite!">Welcome to my website!</h3>
+        <h3 data-en="Who am I?" data-de="Wer bin ich?">Who am I?</h3>
         <a href="about.html">
             <img src="img/icon-person.png" height="10%" width="10%" alt="Person Icon" class="person-icon">
         </a>
-        <h3 data-en="Career" data-de="Beruflicher Werdegang">Beruflicher Werdegang</h3>
+        <h3 data-en="Career" data-de="Beruflicher Werdegang">Career</h3>
         <a href="career.html">
             <img src="img/icon-career.png" height="10%" width="10%" alt="Career Icon" class="career-icon">
         </a>
-        <h3 data-en="Education" data-de="Schulischer Werdegang">Schulischer Werdegang</h3>
+        <h3 data-en="Education" data-de="Schulischer Werdegang">Education</h3>
         <a href="education.html">
             <img src="img/icon-education.png" height="10%" width="10%" alt="Education Icon" class="education-icon">
         </a>
-        <h3 data-en="My Professional Skills" data-de="Meine berufsspezifischen Fähigkeiten">Meine berufsspezifischen
-            Fähigkeiten</h3>
+        <h3 data-en="My Professional Skills" data-de="Meine berufsspezifischen Fähigkeiten">My Professional Skills</h3>
         <a href="skills.html">
             <img src="img/icon-skills.png" height="10%" width="10%" alt="Skills Icon" class="skills-icon">
         </a>
-        <h3 data-en="How to Contact Me?" data-de="Wie können Sie mich kontaktieren?">Wie können Sie mich kontaktieren?
-        </h3>
+        <h3 data-en="How to Contact Me?" data-de="Wie können Sie mich kontaktieren?">How to Contact Me?</h3>
         <a href="contact.html">
             <img src="img/icon-contact.png" height="10%" width="10%" alt="Contact Icon" class="contact-icon">
         </a>
 
-        <h3 data-en="Imprint" data-de="Hier gelangen Sie zum Impressum">Hier gelangen Sie zum Impressum
-        </h3>
+        <h3 data-en="Imprint" data-de="Hier gelangen Sie zum Impressum">Imprint</h3>
         <a href="impressum.html">
-            <img src="img/icon-imprint.png" height="10%" width="10%" alt="Contact Icon" class="contact-icon">
+            <img src="img/icon-imprint.png" height="10%" width="10%" alt="Imprint Icon" class="contact-icon">
         </a>
 
     </main>
@@ -84,10 +80,10 @@
 
 
     <script>
-        // Setze die Sprache beim Laden der Seite
+        // Set language on page load
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
-            const lang = urlParams.get('lang') || localStorage.getItem('language') || 'de';
+            const lang = urlParams.get('lang') || localStorage.getItem('language') || 'en';
             changeLanguage(lang);
         });
     </script>
