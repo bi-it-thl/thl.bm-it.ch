@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schulischer Werdegang</title>
+    <title>Educational Background</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
+    <!-- Header Navigation Section -->
     <header>
         <div class="header-bar">
+            <!-- Navigation links with data attributes for switching between English and German -->
             <a href="index.html" class="nav-link" id="home-link" data-en="Home" data-de="Home">Home</a>
-            <a href="about.html" class="nav-link" id="about-link" data-en="About Me" data-de="Über mich">Über mich</a>
-            <a href="career.html" class="nav-link" id="career-link" data-en="Career"
-                data-de="Beruflicher Werdegang">Beruflicher Werdegang</a>
-            <a href="education.html" class="nav-link active" id="education-link" data-en="Education"
-                data-de="Schulischer Werdegang">Schulischer Werdegang</a>
-            <a href="skills.html" class="nav-link" id="skills-link" data-en="Skills"
-                data-de="Fähigkeiten">Fähigkeiten</a>
-            <a href="contact.html" class="nav-link" id="contact-link" data-en="Contact" data-de="Kontakt">Kontakt</a>
-            <a href="impressum.html" class="nav-link" id="impressum-link" data-en="Imprint"
-                data-de="Impressum">Impressum</a>
+            <a href="about.html" class="nav-link" id="about-link" data-en="About Me" data-de="Über mich">About Me</a>
+            <a href="career.html" class="nav-link" id="career-link" data-en="Career" data-de="Beruflicher Werdegang">Career</a>
+            <a href="education.html" class="nav-link active" id="education-link" data-en="Education" data-de="Schulischer Werdegang">Education</a>
+            <a href="skills.html" class="nav-link" id="skills-link" data-en="Skills" data-de="Fähigkeiten">Skills</a>
+            <a href="contact.html" class="nav-link" id="contact-link" data-en="Contact" data-de="Kontakt">Contact</a>
+            <a href="impressum.html" class="nav-link" id="impressum-link" data-en="Imprint" data-de="Impressum">Imprint</a>
 
-            <!-- Sprachumschalter-Buttons -->
+            <!-- Language switcher for toggling between English and German -->
             <div class="language-switcher">
                 <img src="img/flag-de.png" alt="Deutsch" id="de-flag" class="language-flag">
                 <img src="img/flag-en.png" alt="English" id="en-flag" class="language-flag">
@@ -32,112 +30,102 @@
         </div>
     </header>
 
-            <!-- Toggle Switch für Dark/Light Mode -->
-            <div class="theme-switch-wrapper">
-                <label class="theme-switch" for="theme-checkbox">
-                    <input type="checkbox" id="theme-checkbox">
-                    <div class="slider round"></div>
-                </label>
-            </div>
+    <!-- Toggle switch for Dark/Light Mode -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-checkbox">
+            <input type="checkbox" id="theme-checkbox">
+            <div class="slider round"></div>
+        </label>
+    </div>
 
+    <!-- Main content section: Educational Background -->
     <main class="page">
-        <!-- Button Timeline für Schulischer Werdegang -->
+        <!-- Buttons for navigating different sections of the educational timeline -->
         <div class="career-timeline">
-            <button class="career-button" data-target="#section-2015-2018" data-en="08/2015 - 08/2018"
-                data-de="08/2015 - 08/2018">08/2015 - 08/2018</button>
-            <button class="career-button" data-target="#section-2014-2015" data-en="08/2014 - 08/2015"
-                data-de="08/2014 - 08/2015">08/2014 - 08/2015</button>
-            <button class="career-button" data-target="#section-2014-2015nr2" data-en="08/2014 - 08/2015"
-                data-de="08/2014 - 08/2015">08/2014 - 08/2015</button>
-            <button class="career-button" data-target="#section-2013-2013" data-en="08/2013 - 12/2013"
-                data-de="08/2013 - 12/2013">08/2013 - 12/2013</button>
-            <button class="career-button" data-target="#section-2003-2013" data-en="08/2003 - 07/2013"
-                data-de="08/2003 - 07/2013">08/2003 - 07/2013</button>
+            <button class="career-button" data-target="#section-2015-2018" data-en="08/2015 - 08/2018" data-de="08/2015 - 08/2018">08/2015 - 08/2018</button>
+            <button class="career-button" data-target="#section-2014-2015" data-en="08/2014 - 08/2015" data-de="08/2014 - 08/2015">08/2014 - 08/2015</button>
+            <button class="career-button" data-target="#section-2014-2015nr2" data-en="08/2014 - 08/2015" data-de="08/2014 - 08/2015">08/2014 - 08/2015</button>
+            <button class="career-button" data-target="#section-2013-2013" data-en="08/2013 - 12/2013" data-de="08/2013 - 12/2013">08/2013 - 12/2013</button>
+            <button class="career-button" data-target="#section-2003-2013" data-en="08/2003 - 07/2013" data-de="08/2003 - 07/2013">08/2003 - 07/2013</button>
         </div>
 
-        <!-- 1. Sektion -->
+        <!-- Section 1: Education from 08/2015 - 08/2018 -->
         <div class="timeline-section" id="section-2015-2018">
             <div class="timeline-header">
                 <h3>08/2015 - 08/2018</h3>
             </div>
             <div class="timeline-content">
-                <h3 data-en="Apprenticeship as a Chef EFZ" data-de="Ausbildung als Koch EFZ">Ausbildung als Koch EFZ
-                </h3>
-                <h2 data-en="At the Alters - und Pflegeheim Herosé, Aarau"
-                    data-de="Alters - und Pflegeheim Herosé, Aarau">Alters - und Pflegeheim Herosé, Aarau</h2>
-                <h2 data-en="Vocational School Aarau" data-de="Berufsschule Aarau">Berufsschule Aarau</h2>
+                <h3 data-en="Apprenticeship as a Chef EFZ" data-de="Ausbildung als Koch EFZ">Apprenticeship as a Chef EFZ</h3>
+                <h2 data-en="At the Alters - und Pflegeheim Herosé, Aarau" data-de="Alters - und Pflegeheim Herosé, Aarau">At the Alters - und Pflegeheim Herosé, Aarau</h2>
+                <h2 data-en="Vocational School Aarau" data-de="Berufsschule Aarau">Vocational School Aarau</h2>
             </div>
         </div>
 
-        <!-- 2. Sektion -->
+        <!-- Section 2: Education from 08/2014 - 08/2015 -->
         <div class="timeline-section" id="section-2014-2015">
             <div class="timeline-header">
                 <h3>08/2014 - 08/2015</h3>
             </div>
             <div class="timeline-content">
-                <h3 data-en="Attendance at the Cantonal School for Vocational Education"
-                    data-de="Besuch der Kantonalen Schule für Berufsbildung">Besuch der Kantonalen Schule für
-                    Berufsbildung</h3>
+                <h3 data-en="Attendance at the Cantonal School for Vocational Education" data-de="Besuch der Kantonalen Schule für Berufsbildung">Attendance at the Cantonal School for Vocational Education</h3>
                 <h2 data-en="Baden" data-de="Baden">Baden</h2>
             </div>
         </div>
 
-        <!-- 3. Sektion -->
+        <!-- Section 3: English Certificate PET during 08/2014 - 08/2015 -->
         <div class="timeline-section" id="section-2014-2015nr2">
             <div class="timeline-header">
                 <h3>08/2014 - 08/2015</h3>
             </div>
             <div class="timeline-content">
-                <h3 data-en="English Certificate 'PET'" data-de="Englisch-Zertifikat 'PET'">Englisch-Zertifikat "PET"
-                </h3>
-                <h2 data-en="Cantonal School for Vocational Education, Baden"
-                    data-de="Kantonale Schule für Berufsbildung Baden">Kantonale Schule für Berufsbildung Baden</h2>
+                <h3 data-en="English Certificate 'PET'" data-de="Englisch-Zertifikat 'PET'">English Certificate "PET"</h3>
+                <h2 data-en="Cantonal School for Vocational Education, Baden" data-de="Kantonale Schule für Berufsbildung Baden">Cantonal School for Vocational Education, Baden</h2>
             </div>
         </div>
 
-        <!-- 4. Sektion -->
+        <!-- Section 4: Polymechanic Apprenticeship (Discontinued) during 08/2013 - 12/2013 -->
         <div class="timeline-section" id="section-2013-2013">
             <div class="timeline-header">
                 <h3>08/2013 - 12/2013</h3>
             </div>
             <div class="timeline-content">
-                <h3 data-en="Apprenticeship as a Polymechanic (Discontinued)"
-                    data-de="Ausbildung als Polymechaniker (abgebrochen)">Ausbildung als Polymechaniker (abgebrochen)
-                </h3>
+                <h3 data-en="Apprenticeship as a Polymechanic (Discontinued)" data-de="Ausbildung als Polymechaniker (abgebrochen)">Apprenticeship as a Polymechanic (Discontinued)</h3>
                 <h2 data-en="Urma AG, Rupperswil" data-de="Urma AG, Rupperswil">Urma AG, Rupperswil</h2>
             </div>
         </div>
 
-        <!-- 5. Sektion -->
+        <!-- Section 5: Primary, Secondary, and Middle School during 08/2003 - 07/2013 -->
         <div class="timeline-section" id="section-2003-2013">
             <div class="timeline-header">
                 <h3>08/2003 - 07/2013</h3>
             </div>
             <div class="timeline-content">
-                <h3 data-en="Primary, Secondary, and Middle School" data-de="Primar-, Bezirks- und Sekundarschule">
-                    Primar-, Bezirks- und Sekundarschule</h3>
-                <h2 data-en="Döttingen and Klingnau AG" data-de="Döttingen und Klingnau AG">Döttingen und Klingnau AG
-                </h2>
+                <h3 data-en="Primary, Secondary, and Middle School" data-de="Primar-, Bezirks- und Sekundarschule">Primary, Secondary, and Middle School</h3>
+                <h2 data-en="Döttingen and Klingnau AG" data-de="Döttingen und Klingnau AG">Döttingen and Klingnau AG</h2>
             </div>
         </div>
     </main>
 
+    <!-- Back to Top Button -->
     <div id="backToTop">
+        <!-- SVG arrow icon for "Back to Top" -->
         <svg class="arrow-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
             <path fill="#FFD700" d="M12 2l-10 18h20z"></path>
         </svg>
+        <!-- Text for "Back to Top" button -->
         <span class="back-to-top-text" data-en="Back to Top" data-de="Back to Top">Back to Top</span>
     </div>
 
-
+    <!-- JavaScript for setting the language on page load -->
     <script>
-        // Setze die Sprache beim Laden der Seite
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
-            const lang = urlParams.get('lang') || localStorage.getItem('language') || 'de';
+            const lang = urlParams.get('lang') || localStorage.getItem('language') || 'en';
             changeLanguage(lang);
         });
     </script>
+    
+    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 
 </body>
