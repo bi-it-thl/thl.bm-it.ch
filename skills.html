@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Berufsspezifische Fähigkeiten</title>
+    <title>Professional Skills</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
+    <!-- Header Navigation Section -->
     <header>
         <div class="header-bar">
+            <!-- Navigation links with data attributes for switching between English and German -->
             <a href="index.html" class="nav-link" id="home-link" data-en="Home" data-de="Home">Home</a>
-            <a href="about.html" class="nav-link" id="about-link" data-en="About Me" data-de="Über mich">Über mich</a>
-            <a href="career.html" class="nav-link" id="career-link" data-en="Career"
-                data-de="Beruflicher Werdegang">Beruflicher Werdegang</a>
-            <a href="education.html" class="nav-link" id="education-link" data-en="Education"
-                data-de="Schulischer Werdegang">Schulischer Werdegang</a>
-            <a href="skills.html" class="nav-link active" id="skills-link" data-en="Skills"
-                data-de="Fähigkeiten">Fähigkeiten</a>
-            <a href="contact.html" class="nav-link" id="contact-link" data-en="Contact" data-de="Kontakt">Kontakt</a>
-            <a href="impressum.html" class="nav-link" id="impressum-link" data-en="Imprint"
-                data-de="Impressum">Impressum</a>
+            <a href="about.html" class="nav-link" id="about-link" data-en="About Me" data-de="Über mich">About Me</a>
+            <a href="career.html" class="nav-link" id="career-link" data-en="Career" data-de="Beruflicher Werdegang">Career</a>
+            <a href="education.html" class="nav-link" id="education-link" data-en="Education" data-de="Schulischer Werdegang">Education</a>
+            <a href="skills.html" class="nav-link active" id="skills-link" data-en="Skills" data-de="Fähigkeiten">Skills</a>
+            <a href="contact.html" class="nav-link" id="contact-link" data-en="Contact" data-de="Kontakt">Contact</a>
+            <a href="impressum.html" class="nav-link" id="impressum-link" data-en="Imprint" data-de="Impressum">Imprint</a>
 
-            <!-- Sprachumschalter-Buttons -->
+            <!-- Language switcher for toggling between English and German -->
             <div class="language-switcher">
                 <img src="img/flag-de.png" alt="Deutsch" id="de-flag" class="language-flag">
                 <img src="img/flag-en.png" alt="English" id="en-flag" class="language-flag">
@@ -32,119 +30,116 @@
         </div>
     </header>
 
-        <!-- Toggle Switch für Dark/Light Mode -->
-        <div class="theme-switch-wrapper">
-            <label class="theme-switch" for="theme-checkbox">
-                <input type="checkbox" id="theme-checkbox">
-                <div class="slider round"></div>
-            </label>
-        </div>
+    <!-- Toggle switch for Dark/Light Mode -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-checkbox">
+            <input type="checkbox" id="theme-checkbox">
+            <div class="slider round"></div>
+        </label>
+    </div>
 
+    <!-- Main content section: Skills -->
     <main class="page">
-        <h3 data-en="Skills" data-de="Fähigkeiten">Fähigkeiten</h3>
+        <h3 data-en="Skills" data-de="Fähigkeiten">Skills</h3>
         <div class="skills-container">
+            <!-- Skill list with rating -->
             <div class="skill">
                 <span data-en="Linux" data-de="Linux">Linux</span>
                 <div class="skill-rating">
-                    <span class="filled"></span><span class="filled"></span><span
-                        class="filled"></span><span></span><span></span><span></span>
+                    <span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span><span></span>
                 </div>
             </div>
+
             <div class="skill">
                 <span data-en="Python" data-de="Python">Python</span>
                 <div class="skill-rating">
-                    <span class="filled"></span><span class="filled"></span><span
-                        class="filled"></span><span></span><span></span><span></span>
+                    <span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span><span></span>
                 </div>
             </div>
 
             <div class="skill">
-                <span data-en="Networking" data-de="Netzwerk">Netzwerk</span>
-                <div class="skill-rating">
-                    <span class="filled"></span><span class="filled"></span><span
-                        class="filled"></span><span class="filled"></span><span></span><span></span>
-                </div>
-            </div>
-
-            <div class="skill">
-                <span data-en="Networking" data-de="Netzwerk">Netzwerk</span>
+                <span data-en="Networking" data-de="Netzwerk">Networking</span>
                 <div class="skill-rating">
                     <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span>
                 </div>
             </div>
+
             <div class="skill">
                 <span data-en="OneNote" data-de="OneNote">OneNote</span>
                 <div class="skill-rating">
-                    <span class="filled"></span><span class="filled"></span><span class="filled"></span><span
-                        class="filled"></span><span></span><span></span>
+                    <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span>
                 </div>
             </div>
+
             <div class="skill">
                 <span data-en="Word" data-de="Word">Word</span>
                 <div class="skill-rating">
-                    <span class="filled"></span><span class="filled"></span><span class="filled"></span><span
-                        class="filled"></span><span class="filled"></span><span></span>
+                    <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span>
                 </div>
             </div>
+
             <div class="skill">
                 <span data-en="Outlook" data-de="Outlook">Outlook</span>
                 <div class="skill-rating">
-                    <span class="filled"></span><span class="filled"></span><span class="filled"></span><span
-                        class="filled"></span><span class="filled"></span><span></span>
+                    <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span>
                 </div>
             </div>
+
             <div class="skill">
                 <span data-en="Bexio" data-de="Bexio">Bexio</span>
                 <div class="skill-rating">
-                    <span class="filled"></span><span class="filled"></span><span class="filled"></span><span
-                        class="filled"></span><span></span><span></span>
+                    <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span><span></span>
                 </div>
             </div>
         </div>
 
-        <h3 data-en="Languages" data-de="Sprachen">Sprachen</h3>
+        <!-- Language skills section -->
+        <h3 data-en="Languages" data-de="Sprachen">Languages</h3>
         <div class="skills-container">
             <div class="skill">
-                <span data-en="German" data-de="Deutsch">Deutsch</span>
+                <span data-en="German" data-de="Deutsch">German</span>
                 <div class="skill-rating">
-                    <span class="filled"></span><span class="filled"></span><span class="filled"></span><span
-                        class="filled"></span><span class="filled"></span><span class="filled"></span>
+                    <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span>
                 </div>
             </div>
+
             <div class="skill">
-                <span data-en="English" data-de="Englisch">Englisch</span>
+                <span data-en="English" data-de="Englisch">English</span>
                 <div class="skill-rating">
-                    <span class="filled"></span><span class="filled"></span><span class="filled"></span><span
-                        class="filled"></span><span class="filled"></span><span></span>
+                    <span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span class="filled"></span><span></span>
                 </div>
             </div>
+
             <div class="skill">
-                <span data-en="French" data-de="Französisch">Französisch</span>
+                <span data-en="French" data-de="Französisch">French</span>
                 <div class="skill-rating">
-                    <span class="filled"></span><span
-                        class="filled"></span><span></span><span></span><span></span><span></span>
+                    <span class="filled"></span><span class="filled"></span><span></span><span></span><span></span><span></span>
                 </div>
             </div>
         </div>
     </main>
 
+    <!-- Back to Top Button -->
     <div id="backToTop">
+        <!-- SVG arrow icon for "Back to Top" -->
         <svg class="arrow-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
             <path fill="#FFD700" d="M12 2l-10 18h20z"></path>
         </svg>
+        <!-- Text for "Back to Top" button -->
         <span class="back-to-top-text" data-en="Back to Top" data-de="Back to Top">Back to Top</span>
     </div>
 
+    <!-- JavaScript for setting the language on page load -->
     <script>
-        // Setze die Sprache beim Laden der Seite
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
-            const lang = urlParams.get('lang') || localStorage.getItem('language') || 'de';
+            const lang = urlParams.get('lang') || localStorage.getItem('language') || 'en';
             changeLanguage(lang);
         });
     </script>
-    <script src="script.js"></script>
 
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
 
 </body>
 
