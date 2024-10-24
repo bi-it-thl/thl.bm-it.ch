@@ -10,22 +10,20 @@
 
 <body>
 
+    <!-- Header/Navigation Section -->
     <header>
 
         <div class="header-bar">
+            <!-- Navigation links with language data attributes for switching between English and German -->
             <a href="index.html" class="nav-link active" id="home-link" data-en="Home" data-de="Home">Home</a>
             <a href="about.html" class="nav-link" id="about-link" data-en="About Me" data-de="Über mich">About Me</a>
-            <a href="career.html" class="nav-link" id="career-link" data-en="Career"
-                data-de="Beruflicher Werdegang">Career</a>
-            <a href="education.html" class="nav-link" id="education-link" data-en="Education"
-                data-de="Schulischer Werdegang">Education</a>
-            <a href="skills.html" class="nav-link" id="skills-link" data-en="Skills"
-                data-de="Fähigkeiten">Skills</a>
+            <a href="career.html" class="nav-link" id="career-link" data-en="Career" data-de="Beruflicher Werdegang">Career</a>
+            <a href="education.html" class="nav-link" id="education-link" data-en="Education" data-de="Schulischer Werdegang">Education</a>
+            <a href="skills.html" class="nav-link" id="skills-link" data-en="Skills" data-de="Fähigkeiten">Skills</a>
             <a href="contact.html" class="nav-link" id="contact-link" data-en="Contact" data-de="Kontakt">Contact</a>
-            <a href="impressum.html" class="nav-link" id="impressum-link" data-en="Imprint"
-                data-de="Impressum">Imprint</a>
+            <a href="impressum.html" class="nav-link" id="impressum-link" data-en="Imprint" data-de="Impressum">Imprint</a>
 
-            <!-- Language switcher buttons -->
+            <!-- Language switcher section to toggle between German and English -->
             <div class="language-switcher">
                 <img src="img/flag-de.png" alt="Deutsch" id="de-flag" class="language-flag">
                 <img src="img/flag-en.png" alt="English" id="en-flag" class="language-flag">
@@ -33,37 +31,50 @@
         </div>
     </header>
 
-            <!-- Toggle Switch for Dark/Light Mode -->
-            <div class="theme-switch-wrapper">
-                <label class="theme-switch" for="theme-checkbox">
-                    <input type="checkbox" id="theme-checkbox">
-                    <div class="slider round"></div>
-                </label>
-            </div>
+    <!-- Toggle switch for Dark/Light Mode -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-checkbox">
+            <input type="checkbox" id="theme-checkbox">
+            <div class="slider round"></div>
+        </label>
+    </div>
 
+    <!-- Main content section of the webpage -->
     <main class="page">
+        <!-- Main heading -->
         <h3 data-en="Welcome to my website!" data-de="Willkommen auf meiner Webseite!">Welcome to my website!</h3>
+        
+        <!-- Section for "Who am I?" with a link to the "About Me" page -->
         <h3 data-en="Who am I?" data-de="Wer bin ich?">Who am I?</h3>
         <a href="about.html">
             <img src="img/icon-person.png" height="10%" width="10%" alt="Person Icon" class="person-icon">
         </a>
+        
+        <!-- Section for Career with a link to the "Career" page -->
         <h3 data-en="Career" data-de="Beruflicher Werdegang">Career</h3>
         <a href="career.html">
             <img src="img/icon-career.png" height="10%" width="10%" alt="Career Icon" class="career-icon">
         </a>
+        
+        <!-- Section for Education with a link to the "Education" page -->
         <h3 data-en="Education" data-de="Schulischer Werdegang">Education</h3>
         <a href="education.html">
             <img src="img/icon-education.png" height="10%" width="10%" alt="Education Icon" class="education-icon">
         </a>
+        
+        <!-- Section for Skills with a link to the "Skills" page -->
         <h3 data-en="My Professional Skills" data-de="Meine berufsspezifischen Fähigkeiten">My Professional Skills</h3>
         <a href="skills.html">
             <img src="img/icon-skills.png" height="10%" width="10%" alt="Skills Icon" class="skills-icon">
         </a>
+        
+        <!-- Section for Contact with a link to the "Contact" page -->
         <h3 data-en="How to Contact Me?" data-de="Wie können Sie mich kontaktieren?">How to Contact Me?</h3>
         <a href="contact.html">
             <img src="img/icon-contact.png" height="10%" width="10%" alt="Contact Icon" class="contact-icon">
         </a>
 
+        <!-- Section for Imprint with a link to the "Impressum" page -->
         <h3 data-en="Imprint" data-de="Hier gelangen Sie zum Impressum">Imprint</h3>
         <a href="impressum.html">
             <img src="img/icon-imprint.png" height="10%" width="10%" alt="Imprint Icon" class="contact-icon">
@@ -71,22 +82,27 @@
 
     </main>
 
+    <!-- Back to Top Button -->
     <div id="backToTop">
+        <!-- Arrow icon for the button -->
         <svg class="arrow-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
             <path fill="#FFD700" d="M12 2l-10 18h20z"></path>
         </svg>
+        <!-- Text for "Back to Top" button -->
         <span class="back-to-top-text" data-en="Back to Top" data-de="Back to Top">Back to Top</span>
     </div>
 
-
+    <!-- JavaScript for setting the language on page load -->
     <script>
-        // Set language on page load
+        // Set language based on URL parameter or localStorage when the page loads
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
             const lang = urlParams.get('lang') || localStorage.getItem('language') || 'en';
             changeLanguage(lang);
         });
     </script>
+
+    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 
 </body>
