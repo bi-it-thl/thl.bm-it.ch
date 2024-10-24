@@ -394,25 +394,44 @@ main h2 {
     border-radius: 10px;
 }
 
-/* GitHub cat icon styling */
-.github-cat {
+/* GitHub cat icon and text container styling */
+.github-link {
     position: fixed;
-    right: 20px;
+    left: 20px;
     bottom: 20px;
-    max-width: 10%;
-    max-height: 10%;
+    max-width: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
     cursor: pointer;
     z-index: 1000;
     opacity: 0.8;
-    transition: opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s; /* Apply smooth transition for both transform and opacity */
 }
 
-.github-cat:hover {
-    transform: scale(1.1);
+/* Icon styling */
+.github-cat {
+    max-width: 20%; /* Ensure the icon fills the container width */
+    max-height: 20%; /* Ensure the icon height adapts to the container */
+    transition: inherit; /* Inherit transition behavior from parent */
 }
+
+/* Styling for the text below the GitHub icon */
+.github-text {
+    color: white;
+    font-size: 16px;
+    margin-top: 5px; /* Add space between the icon and text */
+    text-align: center;
+    transition: inherit; /* Inherit transition behavior from parent */
+}
+
+/* Hover effect on the entire link (icon + text) */
+.github-link:hover {
+    transform: scale(1.1); /* Slightly enlarge both icon and text on hover */
+    opacity: 1; /* Make the icon and text fully visible */
+}
+
+
 
 /* Mobile adjustments */
 @media (max-width: 768px) {
