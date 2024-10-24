@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beruflicher Werdegang</title>
+    <title>Career</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
+    <!-- Header Navigation Section -->
     <header>
         <div class="header-bar">
+            <!-- Navigation links with language data attributes for English and German -->
             <a href="index.html" class="nav-link" id="home-link" data-en="Home" data-de="Home">Home</a>
-            <a href="about.html" class="nav-link" id="about-link" data-en="About Me" data-de="Über mich">Über mich</a>
-            <a href="career.html" class="nav-link active" id="career-link" data-en="Career"
-                data-de="Beruflicher Werdegang">Beruflicher Werdegang</a>
-            <a href="education.html" class="nav-link" id="education-link" data-en="Education"
-                data-de="Schulischer Werdegang">Schulischer Werdegang</a>
-            <a href="skills.html" class="nav-link" id="skills-link" data-en="Skills"
-                data-de="Fähigkeiten">Fähigkeiten</a>
-            <a href="contact.html" class="nav-link" id="contact-link" data-en="Contact" data-de="Kontakt">Kontakt</a>
-            <a href="impressum.html" class="nav-link" id="impressum-link" data-en="Imprint"
-                data-de="Impressum">Impressum</a>
+            <a href="about.html" class="nav-link" id="about-link" data-en="About Me" data-de="Über mich">About Me</a>
+            <a href="career.html" class="nav-link active" id="career-link" data-en="Career" data-de="Beruflicher Werdegang">Career</a>
+            <a href="education.html" class="nav-link" id="education-link" data-en="Education" data-de="Schulischer Werdegang">Education</a>
+            <a href="skills.html" class="nav-link" id="skills-link" data-en="Skills" data-de="Fähigkeiten">Skills</a>
+            <a href="contact.html" class="nav-link" id="contact-link" data-en="Contact" data-de="Kontakt">Contact</a>
+            <a href="impressum.html" class="nav-link" id="impressum-link" data-en="Imprint" data-de="Impressum">Imprint</a>
 
-            <!-- Sprachumschalter-Buttons -->
+            <!-- Language switcher for toggling between English and German -->
             <div class="language-switcher">
                 <img src="img/flag-de.png" alt="Deutsch" id="de-flag" class="language-flag">
                 <img src="img/flag-en.png" alt="English" id="en-flag" class="language-flag">
@@ -32,166 +30,136 @@
         </div>
     </header>
 
-        <!-- Toggle Switch für Dark/Light Mode -->
-        <div class="theme-switch-wrapper">
-            <label class="theme-switch" for="theme-checkbox">
-                <input type="checkbox" id="theme-checkbox">
-                <div class="slider round"></div>
-            </label>
-        </div>
+    <!-- Toggle switch for Dark/Light Mode -->
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-checkbox">
+            <input type="checkbox" id="theme-checkbox">
+            <div class="slider round"></div>
+        </label>
+    </div>
 
+    <!-- Main content section with career timeline -->
     <main class="page">
-
         <div class="career-timeline">
-            <button class="career-button" data-target="#section-2024-heute" data-en="08/2024 - Today"
-                data-de="08/2024 - Heute">08/2024 - Heute</button>
+            <!-- Buttons for career timeline, changing content based on date selection -->
+            <button class="career-button" data-target="#section-2024-heute" data-en="08/2024 - Today" data-de="08/2024 - Heute">08/2024 - Today</button>
             <button class="career-button" data-target="#section-2023-2024">10/2023 - 08/2024</button>
             <button class="career-button" data-target="#section-2022-2023">04/2022 - 10/2023</button>
             <button class="career-button" data-target="#section-2021-2022">02/2021 - 03/2022</button>
             <button class="career-button" data-target="#section-2018-2021">08/2018 - 02/2021</button>
         </div>
 
-        <!-- 1. Sektion -->
+        <!-- Section 1: Career from 08/2024 - Today -->
         <div class="timeline-section" id="section-2024-heute">
             <div class="timeline-header">
-                <h3>08/2024 - Heute</h3>
+                <h3>08/2024 - Today</h3>
             </div>
             <div class="timeline-content">
-                <h3 data-en="Apprenticeship as a Platform Developer EFZ"
-                    data-de="Ausbildung als Plattformentwickler EFZ">Ausbildung als Plattformentwickler EFZ</h3>
-                <h2 data-en="At Espas Zurich" data-de="In der Espas Zürich">In der Espas Zürich</h2>
+                <h3 data-en="Apprenticeship as a Platform Developer EFZ" data-de="Ausbildung als Plattformentwickler EFZ">Apprenticeship as a Platform Developer EFZ</h3>
+                <h2 data-en="At Espas Zurich" data-de="In der Espas Zürich">At Espas Zurich</h2>
                 <ul>
-                    <li data-en="Planning, managing, and maintaining physical and virtual server systems..."
-                        data-de="Planung, Verwaltung und Wartung physischer und virtueller Serversysteme sowie zugehöriger Dienste.">
-                        Planung, Verwaltung und Wartung physischer und virtueller Serversysteme sowie zugehöriger
-                        Dienste.
+                    <li data-en="Planning, managing, and maintaining physical and virtual server systems..." data-de="Planung, Verwaltung und Wartung physischer und virtueller Serversysteme sowie zugehöriger Dienste.">
+                        Planning, managing, and maintaining physical and virtual server systems...
                     </li>
-                    <li data-en="Designing and setting up local networks (LAN), including selecting appropriate network components..."
-                        data-de="Konzeption und Aufbau lokaler Netzwerke (LAN), inklusive Auswahl geeigneter Netzkomponenten...">
-                        Konzeption und Aufbau lokaler Netzwerke (LAN), inklusive Auswahl geeigneter Netzkomponenten...
+                    <li data-en="Designing and setting up local networks (LAN), including selecting appropriate network components..." data-de="Konzeption und Aufbau lokaler Netzwerke (LAN), inklusive Auswahl geeigneter Netzkomponenten...">
+                        Designing and setting up local networks (LAN), including selecting appropriate network components...
                     </li>
-                    <li data-en="Ensuring the security and availability of systems and services, as well as network performance..."
-                        data-de="Sicherstellung der Sicherheit und Verfügbarkeit der Systeme und Dienste sowie der Leistungsfähigkeit des Netzwerks.">
-                        Sicherstellung der Sicherheit und Verfügbarkeit der Systeme und Dienste sowie der
-                        Leistungsfähigkeit des Netzwerks.
+                    <li data-en="Ensuring the security and availability of systems and services, as well as network performance..." data-de="Sicherstellung der Sicherheit und Verfügbarkeit der Systeme und Dienste sowie der Leistungsfähigkeit des Netzwerks.">
+                        Ensuring the security and availability of systems and services, as well as network performance...
                     </li>
-                    <li data-en="Protecting and securely distributing information to ensure its integrity and security..."
-                        data-de="Schutz und sichere Verbreitung von Informationen, um deren Integrität und Sicherheit zu gewährleisten.">
-                        Schutz und sichere Verbreitung von Informationen, um deren Integrität und Sicherheit zu
-                        gewährleisten.
+                    <li data-en="Protecting and securely distributing information to ensure its integrity and security..." data-de="Schutz und sichere Verbreitung von Informationen, um deren Integrität und Sicherheit zu gewährleisten.">
+                        Protecting and securely distributing information to ensure its integrity and security...
                     </li>
                 </ul>
             </div>
         </div>
 
-        <!-- 2. Sektion -->
+        <!-- Section 2: Career from 10/2023 - 08/2024 -->
         <div class="timeline-section" id="section-2023-2024">
             <div class="timeline-header">
                 <h3>10/2023 - 08/2024</h3>
             </div>
             <div class="timeline-content">
-                <h3 data-en="Targeted Preparation as a Platform Developer"
-                    data-de="Gezielte Vorbereitung als Plattformentwickler">Gezielte Vorbereitung als
-                    Plattformentwickler</h3>
-                <h2 data-en="At Espas Zurich" data-de="In der Espas Zürich">In der Espas Zürich</h2>
+                <h3 data-en="Targeted Preparation as a Platform Developer" data-de="Gezielte Vorbereitung als Plattformentwickler">Targeted Preparation as a Platform Developer</h3>
+                <h2 data-en="At Espas Zurich" data-de="In der Espas Zürich">At Espas Zurich</h2>
                 <ul>
-                    <li data-en="Solving API-specific tasks" data-de="Lösen von API-Spezifischen Aufgaben">Lösen von
-                        API-Spezifischen Aufgaben</li>
-                    <li data-en="Solving PFE-specific tasks" data-de="Lösen von PFE-Spezifischen Aufgaben">Lösen von
-                        PFE-Spezifischen Aufgaben</li>
-                    <li data-en="Deepening and collaborating on projects for PFE"
-                        data-de="Vertiefung und Mitarbeit bei Projekten für PFE">Vertiefung und Mitarbeit bei Projekten
-                        für PFE</li>
-                    <li data-en="OneNote Specialist (internal support)" data-de="OneNote Specialist (interner Support)">
-                        OneNote Specialist (interner Support)</li>
-                    <li data-en="Managing and creating own projects for PFE"
-                        data-de="Führen und kreieren eigener Projekte für PFE">Führen und kreieren eigener Projekte für
-                        PFE</li>
-                    <li data-en="Designing tasks for targeted PFE preparation"
-                        data-de="Gestalten von Aufgaben für Gezielte Vorbereitung PFE">Gestalten von Aufgaben für
-                        Gezielte Vorbereitung PFE</li>
+                    <li data-en="Solving API-specific tasks" data-de="Lösen von API-Spezifischen Aufgaben">Solving API-specific tasks</li>
+                    <li data-en="Solving PFE-specific tasks" data-de="Lösen von PFE-Spezifischen Aufgaben">Solving PFE-specific tasks</li>
+                    <li data-en="Deepening and collaborating on projects for PFE" data-de="Vertiefung und Mitarbeit bei Projekten für PFE">Deepening and collaborating on projects for PFE</li>
+                    <li data-en="OneNote Specialist (internal support)" data-de="OneNote Specialist (interner Support)">OneNote Specialist (internal support)</li>
+                    <li data-en="Managing and creating own projects for PFE" data-de="Führen und kreieren eigener Projekte für PFE">Managing and creating own projects for PFE</li>
+                    <li data-en="Designing tasks for targeted PFE preparation" data-de="Gestalten von Aufgaben für Gezielte Vorbereitung PFE">Designing tasks for targeted PFE preparation</li>
                 </ul>
             </div>
         </div>
 
-        <!-- 3. Sektion -->
+        <!-- Section 3: Career from 04/2022 - 10/2023 -->
         <div class="timeline-section" id="section-2022-2023">
             <div class="timeline-header">
                 <h3>04/2022 - 10/2023</h3>
             </div>
             <div class="timeline-content">
-                <h3 data-en="Employee at Restwert-Suhr" data-de="Mitarbeiter Restwert-Suhr">Mitarbeiter Restwert-Suhr
-                </h3>
-                <h2 data-en="Foundation Töpferhaus, Suhr" data-de="Stiftung Töpferhaus, Suhr">Stiftung Töpferhaus, Suhr
-                </h2>
+                <h3 data-en="Employee at Restwert-Suhr" data-de="Mitarbeiter Restwert-Suhr">Employee at Restwert-Suhr</h3>
+                <h2 data-en="Foundation Töpferhaus, Suhr" data-de="Stiftung Töpferhaus, Suhr">Foundation Töpferhaus, Suhr</h2>
                 <ul>
-                    <li data-en="Photography and image editing" data-de="Fotografie und Bildbearbeitung">Fotografie und
-                        Bildbearbeitung</li>
-                    <li data-en="Article recording and storage" data-de="Artikelerfassung und Artikellagerung">
-                        Artikelerfassung und Artikellagerung</li>
-                    <li data-en="Customer contact (in person, phone, and email)"
-                        data-de="Kundenkontakt (persönlich, telefonisch und per Mail)">Kundenkontakt (persönlich,
-                        telefonisch und per Mail)</li>
-                    <li data-en="Accounting and payment transactions" data-de="Buchhaltung und Zahlungsverkehr">
-                        Buchhaltung und Zahlungsverkehr</li>
-                    <li data-en="Sales strategies and their implementation"
-                        data-de="Verkaufsstrategien und deren Umsetzung">Verkaufsstrategien und deren Umsetzung</li>
+                    <li data-en="Photography and image editing" data-de="Fotografie und Bildbearbeitung">Photography and image editing</li>
+                    <li data-en="Article recording and storage" data-de="Artikelerfassung und Artikellagerung">Article recording and storage</li>
+                    <li data-en="Customer contact (in person, phone, and email)" data-de="Kundenkontakt (persönlich, telefonisch und per Mail)">Customer contact (in person, phone, and email)</li>
+                    <li data-en="Accounting and payment transactions" data-de="Buchhaltung und Zahlungsverkehr">Accounting and payment transactions</li>
+                    <li data-en="Sales strategies and their implementation" data-de="Verkaufsstrategien und deren Umsetzung">Sales strategies and their implementation</li>
                 </ul>
             </div>
         </div>
 
-        <!-- 4. Sektion -->
+        <!-- Section 4: Personal Timeout from 02/2021 - 03/2022 -->
         <div class="timeline-section" id="section-2021-2022">
             <div class="timeline-header">
                 <h3>02/2021 - 03/2022</h3>
             </div>
             <div class="timeline-content">
-                <h3 data-en="Personal Timeout and Reorientation" data-de="Persönliche Auszeit und Neuorientierung">
-                    Persönliche Auszeit und Neuorientierung</h3>
+                <h3 data-en="Personal Timeout and Reorientation" data-de="Persönliche Auszeit und Neuorientierung">Personal Timeout and Reorientation</h3>
             </div>
         </div>
 
-        <!-- 5. Sektion -->
+        <!-- Section 5: Career from 08/2018 - 02/2021 -->
         <div class="timeline-section" id="section-2018-2021">
             <div class="timeline-header">
                 <h3>08/2018 - 02/2021</h3>
             </div>
             <div class="timeline-content">
-                <h3 data-en="Chef de Partie" data-de="Koch, Chef de Partie">Koch, Chef de Partie</h3>
-                <h2 data-en="Migros Restaurant Wynecenter, Buchs AG" data-de="Migros Restaurant Wynecenter, Buchs AG">
-                    Migros Restaurant Wynecenter, Buchs AG</h2>
+                <h3 data-en="Chef de Partie" data-de="Koch, Chef de Partie">Chef de Partie</h3>
+                <h2 data-en="Migros Restaurant Wynecenter, Buchs AG" data-de="Migros Restaurant Wynecenter, Buchs AG">Migros Restaurant Wynecenter, Buchs AG</h2>
                 <ul>
-                    <li data-en="Independent management of the station" data-de="Eigenständige Leitung des Postens">
-                        Eigenständige Leitung des Postens</li>
-                    <li data-en="Menu design" data-de="Mitgestaltung der Menus">Mitgestaltung der Menus</li>
-                    <li data-en="Customer service and cashiering" data-de="Kundenbedienung und Bedienung der Kasse">
-                        Kundenbedienung und Bedienung der Kasse</li>
-                    <li data-en="Monitoring and implementation of the hygiene concept"
-                        data-de="Überwachung und Umsetzung des Hygienekonzepts">Überwachung und Umsetzung des
-                        Hygienekonzepts</li>
-                    <li data-en="Assistance in retail and logistics, totaling 3 months (Corona crisis)"
-                        data-de="Aushilfe im Detailhandel und als Logistiker, insgesamt 3 Monate (Corona-Krise)">
-                        Aushilfe im Detailhandel und als Logistiker, insgesamt 3 Monate (Corona-Krise)</li>
+                    <li data-en="Independent management of the station" data-de="Eigenständige Leitung des Postens">Independent management of the station</li>
+                    <li data-en="Menu design" data-de="Mitgestaltung der Menus">Menu design</li>
+                    <li data-en="Customer service and cashiering" data-de="Kundenbedienung und Bedienung der Kasse">Customer service and cashiering</li>
+                    <li data-en="Monitoring and implementation of the hygiene concept" data-de="Überwachung und Umsetzung des Hygienekonzepts">Monitoring and implementation of the hygiene concept</li>
+                    <li data-en="Assistance in retail and logistics, totaling 3 months (Corona crisis)" data-de="Aushilfe im Detailhandel und als Logistiker, insgesamt 3 Monate (Corona-Krise)">Assistance in retail and logistics, totaling 3 months (Corona crisis)</li>
                 </ul>
             </div>
         </div>
     </main>
 
+    <!-- Back to Top Button -->
     <div id="backToTop">
+        <!-- SVG icon for "Back to Top" -->
         <svg class="arrow-up" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
             <path fill="#FFD700" d="M12 2l-10 18h20z"></path>
         </svg>
+        <!-- Text for "Back to Top" -->
         <span class="back-to-top-text" data-en="Back to Top" data-de="Back to Top">Back to Top</span>
     </div>
 
+    <!-- JavaScript to set the language based on URL or localStorage -->
     <script>
-        // Setze die Sprache beim Laden der Seite
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
-            const lang = urlParams.get('lang') || localStorage.getItem('language') || 'de';
+            const lang = urlParams.get('lang') || localStorage.getItem('language') || 'en';
             changeLanguage(lang);
         });
     </script>
+
+    <!-- Link to external JavaScript file -->
     <script src="script.js"></script>
 
 </body>
