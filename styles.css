@@ -299,6 +299,12 @@ main h2 {
     transform: scale(1.2);
 }
 
+.nav-link:hover {
+    color: #FFCC00; /* Ändere die Textfarbe beim Hover */
+    transition: color 0.3s ease; /* Sanfter Übergang */
+}
+
+
 #backToTop:hover .arrow-up {
     border-bottom-width: 36px;
     border-bottom-color: #0047FF;
@@ -601,6 +607,11 @@ body.light-mode ul li::marker {
 
 body.light-mode ul {
     color: black;
+}
+
+body.light-mode .nav-link:hover {
+    color: darkgray; /* Ändere die Textfarbe beim Hover */
+    transition: color 0.3s ease; /* Sanfter Übergang */
 }
 
 body.light-mode h3 {
