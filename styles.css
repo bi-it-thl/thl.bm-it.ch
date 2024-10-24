@@ -2,26 +2,26 @@
 body {
     background: linear-gradient(135deg, #1C1C1C, #333333);
     background-attachment: fixed;
-    /* Fixiere den Hintergrund, um Brüche zu vermeiden */
+    /* Fix the background to avoid breaks */
     background-size: cover;
-    /* Stellt sicher, dass der Verlauf die gesamte Seite abdeckt */
+    /* Ensures the gradient covers the entire page */
     background-color: #1C1C1C;
     color: white;
 }
 
-/* Entferne jegliche Hintergrundfarbe von main */
+/* Removing background color from main */
 main {
     background: none;
-    /* Kein eigener Hintergrund für das main-Element */
+    /* No own background for the main element */
     margin-top: 60px;
-    /* Platz für den festen Header */
+    /* Space for the fixed header */
     margin-left: 25%;
     margin-right: 25%;
     text-align: center;
     font-size: x-large;
 }
 
-/* Titel im Kontaktbereich weiter nach unten setzen */
+/* Move title towards the middle */
 .page h2 {
     margin-top: 100px;
 }
@@ -43,7 +43,7 @@ main {
     white-space: nowrap;
 }
 
-/* Anpassung nur für den englischen Header */
+/* Adjustment only for the English header */
 .english-header {
     justify-content: center;
     gap: 30px;
@@ -83,7 +83,7 @@ main {
     background-position: center;
 }
 
-/* Opazität für die aktive- und nicht-aktive Flagge */
+/* Opacity for the active and inactive flag */
 .inactive-flag {
     opacity: 0.1;
 }
@@ -92,14 +92,14 @@ main {
     opacity: 0.3;
 }
 
-/* Platz für den Header schaffen */
+/* Create space for the header */
 main {
     margin-top: 60px;
     text-align: center;
     font-size: x-large;
 }
 
-/* Willkommenstext und Icon Styling */
+/* Welcome text and icon styling */
 main h2 {
     font-size: 24px;
     color: white;
@@ -128,7 +128,7 @@ main h2 {
     transform: scale(1.1);
 }
 
-/* Animationen */
+/* Animations */
 @keyframes slideIn {
     from {
         transform: translateX(100%);
@@ -153,17 +153,17 @@ main h2 {
     }
 }
 
-/* Füge die Animation zur Seite hinzu */
+/* Add animation to the page */
 .page {
     animation: slideIn 0.5s forwards;
 }
 
-/* Klasse für das Herausgleiten, die wir per JavaScript hinzufügen */
+/* Class for sliding out, added via JavaScript */
 .page.out {
     animation: slideOut 0.5s forwards;
 }
 
-/* Header Text Styling für Home und andere Seiten */
+/* Header text styling for Home and other pages */
 .header-bar h1 {
     font-size: 24px;
     margin: 0;
@@ -172,7 +172,7 @@ main h2 {
     text-align: center;
 }
 
-/* Button Styling für Beruflicher und Schulischer Werdegang */
+/* Button styling for Career and Education sections */
 .career-timeline,
 .education-timeline {
     display: flex;
@@ -198,7 +198,7 @@ main h2 {
     background-color: #0047FF;
 }
 
-/* Skills Styling */
+/* Skills styling */
 .skills-container {
     margin-top: 80px;
     display: flex;
@@ -228,11 +228,10 @@ main h2 {
 }
 
 .filled {
-    background-color:#FFCC00;
+    background-color: #FFCC00;
 }
 
-
-/* Kontaktformular Styling */
+/* Contact form styling */
 .contact-form {
     background-color: rgba(0, 0, 0, 0.9);
     padding: 20px 40px;
@@ -279,7 +278,7 @@ main h2 {
     background-color: #FFCC00;
 }
 
-/* Back-to-Top Button Styling */
+/* Back-to-Top button styling */
 #backToTop {
     position: fixed;
     right: 20px;
@@ -300,10 +299,9 @@ main h2 {
 }
 
 .nav-link:hover {
-    color: #FFCC00; /* Ändere die Textfarbe beim Hover */
-    transition: color 0.3s ease; /* Sanfter Übergang */
+    color: #FFCC00; /* Change text color on hover */
+    transition: color 0.3s ease; /* Smooth transition */
 }
-
 
 #backToTop:hover .arrow-up {
     border-bottom-width: 36px;
@@ -331,7 +329,7 @@ main h2 {
     opacity: 0.8;
 }
 
-/* Timeline Styling */
+/* Timeline styling */
 .timeline-section {
     margin: 40px 0;
     padding: 0;
@@ -389,13 +387,14 @@ main h2 {
     color: white;
 }
 
-/* Bild im "About Me"-Bereich anpassen */
+/* Image adjustments in the "About Me" section */
 .about-image img {
     max-width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
+/* GitHub cat icon styling */
 .github-cat {
     position: fixed;
     right: 20px;
@@ -415,9 +414,7 @@ main h2 {
     transform: scale(1.1);
 }
 
-
-
-/* Anpassungen für mobile Geräte */
+/* Mobile adjustments */
 @media (max-width: 768px) {
     .header-bar {
         display: block;
@@ -546,7 +543,7 @@ main h2 {
     }
 }
 
-/* Toggle Switch Styles */
+/* Toggle switch styles */
 .theme-switch-wrapper {
     position: fixed;
     top: 80px;
@@ -601,8 +598,7 @@ input:checked + .slider::before {
     transform: translateX(26px);
 }
 
-/* lightmode anpassungen */
-
+/* Light mode adjustments */
 body.light-mode {
     background: linear-gradient(135deg, #D3D3D3, #FFFFFF);
     background-size: 100% 100%;
@@ -618,7 +614,7 @@ body.light-mode .skill-rating span {
     border: 2px solid #0047FF !important;
 }
 
-body.light-mode .filled{
+body.light-mode .filled {
     background-color: #0047FF;
 }
 
@@ -635,8 +631,8 @@ body.light-mode ul {
 }
 
 body.light-mode .nav-link:hover {
-    color: darkgray; /* Ändere die Textfarbe beim Hover */
-    transition: color 0.3s ease; /* Sanfter Übergang */
+    color: darkgray;
+    transition: color 0.3s ease;
 }
 
 body.light-mode h3 {
