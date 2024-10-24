@@ -197,6 +197,8 @@ function toggleImages() {
                 img.setAttribute('src', 'img/icon-contact2.png');
             } else if (originalSrc.includes('img/icon-imprint.png')) {
                 img.setAttribute('src', 'img/icon-imprint2.png');
+            } else if (originalSrc.includes('img/octocat.png')) {
+                img.setAttribute('src', 'img/octocat2.png');
             }
         } else {
             // Setze auf die "dark-mode"-Bilder zurück
@@ -212,7 +214,10 @@ function toggleImages() {
                 img.setAttribute('src', 'img/icon-contact.png');
             } else if (originalSrc.includes('img/icon-imprint2.png')) {
                 img.setAttribute('src', 'img/icon-imprint.png');
+            } else if (originalSrc.includes('img/octocat2.png')) {
+                img.setAttribute('src', 'img/octocat.png');
             }
+
         }
     });
 }

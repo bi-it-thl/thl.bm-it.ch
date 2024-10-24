@@ -396,6 +396,25 @@ main h2 {
     border-radius: 10px;
 }
 
+.github-link {
+    position: fixed;
+    bottom: -300px; /* Abstand vom unteren Rand */
+    right: -450px;  /* Abstand vom rechten Rand */
+    z-index: 1000;
+}
+
+.github-cat {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s;
+}
+
+.github-cat:hover {
+    transform: scale(1.1);
+}
+
+
+
 /* Anpassungen für mobile Geräte */
 @media (max-width: 768px) {
     .header-bar {
