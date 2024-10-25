@@ -702,9 +702,13 @@ body.light-mode .back-to-top-text {
     color: black;
 }
 
-body.light-mode #backToTop:hover .arrow-up {
-    border-bottom-color: darkgray;
+body.light-mode .github-text{
+    color: black;
 }
+
+/* body.light-mode #backToTop:hover .arrow-up {
+    border-bottom-color: darkgray;
+} */
 
 body.light-mode .arrow-up {
     border-bottom: 30px solid #0047FF;
