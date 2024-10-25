@@ -191,11 +191,14 @@ main h2 {
     font-size: 28px;
     border-radius: 10px;
     cursor: pointer;
+    transition: transform 0.5s, opacity 0.5s; /* Apply smooth transition for both transform and opacity */
 }
 
 .career-button:hover,
 .education-button:hover {
     background-color: #0047FF;
+    transform: 0.5s;
+    opacity: 0.5s;
 }
 
 /* Skills styling */
@@ -291,7 +294,7 @@ main h2 {
     cursor: pointer;
     z-index: 1000;
     opacity: 0.8;
-    transition: opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s; /* Apply smooth transition for both transform and opacity */
 }
 
 #backToTop:hover {
@@ -304,8 +307,10 @@ main h2 {
 }
 
 #backToTop:hover .arrow-up {
-    border-bottom-width: 36px;
-    border-bottom-color: #0047FF;
+    /* border-bottom-width: 36px; */
+    transform: scale(1.1); /* Slightly enlarge both icon and text on hover */
+    /* border-bottom-color: #0047FF; */
+    transition: 1.1;
 }
 
 #backToTop:hover .back-to-top-text {
@@ -405,8 +410,9 @@ main h2 {
     align-items: center;
     cursor: pointer;
     z-index: 1000;
-    opacity: 0.8;
+    opacity: 1;
     transition: transform 0.3s, opacity 0.3s; /* Apply smooth transition for both transform and opacity */
+    text-decoration: none;
 }
 
 /* Icon styling */
@@ -423,6 +429,7 @@ main h2 {
     margin-top: 5px; /* Add space between the icon and text */
     text-align: center;
     transition: inherit; /* Inherit transition behavior from parent */
+    text-decoration: none;
 }
 
 /* Hover effect on the entire link (icon + text) */
