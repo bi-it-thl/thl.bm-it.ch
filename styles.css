@@ -407,6 +407,7 @@ main h2 {
     z-index: 1000;
     opacity: 0.8;
     transition: transform 0.3s, opacity 0.3s; /* Apply smooth transition for both transform and opacity */
+    text-decoration: none;
 }
 
 /* Icon styling */
@@ -423,6 +424,7 @@ main h2 {
     margin-top: 5px; /* Add space between the icon and text */
     text-align: center;
     transition: inherit; /* Inherit transition behavior from parent */
+    text-decoration: none;
 }
 
 /* Hover effect on the entire link (icon + text) */
