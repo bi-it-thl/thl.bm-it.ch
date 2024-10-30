@@ -4,7 +4,7 @@
 
 This repository contains the source code for my personal portfolio website. The website showcases my professional journey, skills, and contact information. It features sections such as career milestones, education, professional skills, and more. It is designed to be responsive, supports light/dark mode, and provides a smooth user experience with modern UI/UX principles. 
 
-My website: thl.bm-it.ch
+To visit my website click [here](https://thl.bm-it.ch)
 
 ## Features
 
